@@ -34,7 +34,7 @@ Package structure:
     It's the folder that keeps the CR3 configuration.
     It's automatically created so there's no need to copy it to device.
 
-  /system/bin/
+  /application/
     Must be copied to device (contains the launcher)
 
   /system/share/

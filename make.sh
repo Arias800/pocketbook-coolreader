@@ -7,7 +7,7 @@ while [ -h "$SOURCE" ]; do
   SOURCE="$(readlink "$SOURCE")"
   [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE"
 done
-PBDEV_DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )/../../"
+PBDEV_DIR="$( cd -P "$( dirname "$SOURCE" )" && cd "../../" && pwd )"
 
 # Set current build date
 DATE="`cat cr3gui/src/cr3pocketbook.h | grep CR_PB_BUILD_DATE | awk '{print $3}' | sed -e s/\\\"//g`"

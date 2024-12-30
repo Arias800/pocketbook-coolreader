@@ -55,7 +55,7 @@ if [ -f "$RESTART_MARK" ]; then
     rm -f "$RESTART_MARK"
 
     # relaunch this script
-    sh $WORK_DIR/application/cr3-pb.app "$1" &
+    sh $WORK_DIR/system/bin/cr3-pb.app "$1" &
 
     # stop script
     exit
@@ -67,4 +67,3 @@ if [ $runTime -lt 5 ]; then
 
     # Restore backup if needed (will be done at some point)
 fi
-

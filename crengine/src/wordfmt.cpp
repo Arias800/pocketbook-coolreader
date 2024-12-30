@@ -609,45 +609,6 @@ int aw_getc(FILE * pFile)
     }
 }
 
-/*
- * bReadBytes
- * This function reads the specified number of bytes from the specified file,
- * starting from the specified offset.
- * Returns TRUE when successfull, otherwise FALSE
- */
-BOOL
-bReadBytes(UCHAR *aucBytes, size_t tMemb, ULONG ulOffset, FILE *pFile)
-{
-    LFAIL(aucBytes == NULL || pFile == NULL || ulOffset > (ULONG)LONG_MAX);
-
-    if ( (void*)pFile==(void*)antiword_stream ) {
-        // use CoolReader stream
-        LVStream * stream = (LVStream*)pFile;
-        // default implementation from Antiword
-        if (ulOffset > (ULONG)LONG_MAX) {
-            return FALSE;
-        }
-        if (stream->SetPos(ulOffset)!=ulOffset ) {
-            return FALSE;
-        }
-        lvsize_t bytesRead=0;
-        if ( stream->Read(aucBytes, tMemb*sizeof(UCHAR), &bytesRead)!=LVERR_OK || bytesRead != (lvsize_t)tMemb ) {
-            return FALSE;
-        }
-    } else {
-        // default implementation from Antiword
-        if (ulOffset > (ULONG)LONG_MAX) {
-            return FALSE;
-        }
-        if (fseek(pFile, (long)ulOffset, SEEK_SET) != 0) {
-            return FALSE;
-        }
-        if (fread(aucBytes, sizeof(UCHAR), tMemb, pFile) != tMemb) {
-            return FALSE;
-        }
-    }
-    return TRUE;
-} /* end of bReadBytes */
 
 /*
  * bTranslateImage - translate the image

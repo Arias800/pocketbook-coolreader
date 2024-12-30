@@ -32,6 +32,8 @@ cd "$WORK_DIR"
 # update launcher
 /bin/rm -rf "$WORK_DIR/system/bin/cr3-pb.app"
 /bin/mv "$TEMP_DIR/system/bin/cr3-pb.app" "$WORK_DIR/system/bin/cr3-pb.app"
+/bin/rm -rf "$WORK_DIR/application/cr3-pb.app"
+/bin/mv "$TEMP_DIR/application/cr3-pb.app" "$WORK_DIR/application/cr3-pb.app"
 
 # update share
 /bin/rm -rf "$WORK_DIR/system/share/cr3"
@@ -45,4 +47,4 @@ cd "$WORK_DIR"
 echo "" > "$UPDATE_MARKER"
 
 # relaunch coolreader
-exec /mnt/ext1/system/bin/cr3-pb.app "$1" "updated" &
+exec /mnt/ext1/application/cr3-pb.app "$1" "updated" &

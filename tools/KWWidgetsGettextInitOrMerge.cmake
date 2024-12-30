@@ -136,4 +136,3 @@ if(SUCCESS)
   file(WRITE "${po_uptodate_file}" 
     "${po_build_file} is *really* up-to-date.")
 endif(SUCCESS)
-

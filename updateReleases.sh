@@ -7,7 +7,7 @@ while [ -h "$SOURCE" ]; do
   SOURCE="$(readlink "$SOURCE")"
   [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE"
 done
-PBDEV_DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )/../../"
+PBDEV_DIR="$( cd -P "$( dirname "$SOURCE" )" && cd "../../" && pwd )"
 
 sdk="$PBDEV_DIR/sources/cr3-fork"
 package="/tmp/cr3-package-$1"
@@ -80,6 +80,10 @@ function doUpdate {
 		fi
 
 		echo " - binary > package"
+		rm -rf "$package/system/share/cr3/application/"*
+		mkdir -p "$package/system/share/cr3/application/"
+		cp -f "$sdk/pb$1/cr3gui/cr3-pb.app" "$package/system/share/cr3/application/"
+
 		rm -rf "$package/system/share/cr3/bin/"*
 		mkdir -p "$package/system/share/cr3/bin"
 		cp -f "$sdk/pb$1/cr3gui/cr3-pb.app" "$package/system/share/cr3/bin/"

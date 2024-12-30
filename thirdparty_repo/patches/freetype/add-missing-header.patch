@@ -1,0 +1,16 @@
+diff --git a/third_party/freetype/builds/unix/ftsystem.c b/third_party/freetype/builds/unix/ftsystem.c
+--- a/third_party/freetype/builds/unix/ftsystem.c
++++ b/third_party/freetype/builds/unix/ftsystem.c
+@@ -16,6 +16,7 @@
+#include <freetype/internal/ftstream.h>
+
+  /* memory-mapping includes and definitions */
+#ifdef HAVE_UNISTD_H
+#include <unistd.h>
+#endif
+
++#include <fcntl.h>
+#include <sys/mman.h>
+#ifndef MAP_FILE
+#define MAP_FILE  0x00
+#endif

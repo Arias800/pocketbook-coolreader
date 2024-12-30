@@ -12,51 +12,51 @@
 #define PB_COMMANDS_START 6200
 
 enum CRPbCommands {
-	PB_CMD_BEGIN = PB_COMMANDS_START,
-	PB_QUICK_MENU,
-	PB_QUICK_MENU_SELECT,
-	PB_CMD_ROTATE,
-	PB_CMD_ROTATE_ANGLE_SET,
-    PB_CMD_CONTENTS,
-    PB_CMD_FRONT_LIGHT,
-    PB_CMD_FULL_UPDATE,
-    PB_CMD_INVERT_DISPLAY,
-    PB_CMD_STATUS_LINE,
-	PB_CMD_LEFT,
-	PB_CMD_RIGHT,
-	PB_CMD_UP,
-	PB_CMD_DOWN,
-	PB_CMD_SELECT_DICT,
-	PB_CMD_TRANSLATE,
-	PB_CMD_MP3,
-	PB_CMD_VOLUME,
-	PB_CMD_BOOKMARK_REMOVE,
-	PB_CMD_MAIN_MENU,
+  PB_CMD_BEGIN = PB_COMMANDS_START,
+  PB_QUICK_MENU,
+  PB_QUICK_MENU_SELECT,
+  PB_CMD_ROTATE,
+  PB_CMD_ROTATE_ANGLE_SET,
+  PB_CMD_CONTENTS,
+  PB_CMD_FRONT_LIGHT,
+  PB_CMD_FULL_UPDATE,
+  PB_CMD_INVERT_DISPLAY,
+  PB_CMD_STATUS_LINE,
+  PB_CMD_LEFT,
+  PB_CMD_RIGHT,
+  PB_CMD_UP,
+  PB_CMD_DOWN,
+  PB_CMD_SELECT_DICT,
+  PB_CMD_TRANSLATE,
+  PB_CMD_MP3,
+  PB_CMD_VOLUME,
+  PB_CMD_BOOKMARK_REMOVE,
+  PB_CMD_MAIN_MENU,
 
-    PB_CMD_UPDATE_WINDOW,
-    PB_CMD_PAGEUP_REPEAT,
-    PB_CMD_PAGEDOWN_REPEAT,
-    PB_CMD_REPEAT_FINISH,
-    PB_CMD_CLEAR_CACHE,
-    PB_CMD_SET_BOOKMARK,
-    PB_CMD_UNSET_BOOKMARK,
-    PB_CMD_ENTER_STANDBY,
+  PB_CMD_UPDATE_WINDOW,
+  PB_CMD_PAGEUP_REPEAT,
+  PB_CMD_PAGEDOWN_REPEAT,
+  PB_CMD_REPEAT_FINISH,
+  PB_CMD_CLEAR_CACHE,
+  PB_CMD_SET_BOOKMARK,
+  PB_CMD_UNSET_BOOKMARK,
+  PB_CMD_ENTER_STANDBY,
 
-    #ifdef POCKETBOOK_PRO
-        PB_CMD_TASK_MANAGER,
-        #ifndef POCKETBOOK_PRO_PRO2
-            PB_CMD_SYSTEM_PANEL,
-        #endif
-        PB_CMD_LOCK_DEVICE,
-        PB_CMD_OTA_UPDATE,
-        PB_CMD_OTA_UPDATE_DEV,
-        #ifdef POCKETBOOK_PRO_FW5
-            PB_CMD_OPEN_SYSTEM_PANEL,
-            PB_CMD_FRONT_LIGHT_TOGGLE,
-        #endif
-    #endif
+#ifdef POCKETBOOK_PRO
+  PB_CMD_TASK_MANAGER,
+#ifndef POCKETBOOK_PRO_PRO2
+  PB_CMD_SYSTEM_PANEL,
+#endif
+  PB_CMD_LOCK_DEVICE,
+  PB_CMD_OTA_UPDATE,
+  PB_CMD_OTA_UPDATE_DEV,
+#ifdef POCKETBOOK_PRO_FW5
+  PB_CMD_OPEN_SYSTEM_PANEL,
+  PB_CMD_FRONT_LIGHT_TOGGLE,
+#endif
+#endif
 
-    PB_CMD_NONE
+  PB_CMD_NONE
 };
 
 #define PB_QUICK_MENU_BMP_ID "fbreader_menu"
@@ -79,7 +79,7 @@ enum CRPbCommands {
 #define PB_CR3_CACHE_SIZE (0x100000 * 64)
 
 #define CR_PB_VERSION "0.0.6-17-62.1"
-#define CR_PB_BUILD_DATE "2018-02-13"
+#define CR_PB_BUILD_DATE "2024-12-30"
 
 #define PB_ROTATE_MODE_360 0
 #define PB_ROTATE_MODE_180 1
@@ -89,52 +89,51 @@ enum CRPbCommands {
 #define PB_ROTATE_MODE_180_FAST_PREV_NEXT 5
 #define PB_ROTATE_MODE_180_FAST_NEXT_PREV 6
 
-#define PB_FRESH_UPDATE_MARKER USERDATA"/.cr3updated"
-#define PB_DEV_MARKER          USERDATA"/.cr3-use-devel-branch"
+#define PB_FRESH_UPDATE_MARKER USERDATA "/.cr3updated"
+#define PB_DEV_MARKER USERDATA "/.cr3-use-devel-branch"
 
 #if defined(POCKETBOOK_PRO_FW5)
-    #define CR_PB_SDK "pro5"
+#define CR_PB_SDK "pro5"
 #elif defined(POCKETBOOK_PRO)
-    #if !defined(POCKETBOOK_PRO_PRO2)
-        #define CR_PB_SDK "pro4"
-    #else
-        #define CR_PB_SDK "pro2"
-    #endif
+#if !defined(POCKETBOOK_PRO_PRO2)
+#define CR_PB_SDK "pro4"
 #else
-    #define CR_PB_SDK "360"
+#define CR_PB_SDK "pro2"
+#endif
+#else
+#define CR_PB_SDK "360"
 #endif
 
 #ifdef SYSTEMSFRONTLIGHT
-    #define PB_FRONT_LIGHT_BIN SYSTEMSFRONTLIGHT
+#define PB_FRONT_LIGHT_BIN SYSTEMSFRONTLIGHT
 #else
-    #define PB_FRONT_LIGHT_BIN SYSTEMDATA"/bin/front-light.app"
+#define PB_FRONT_LIGHT_BIN SYSTEMDATA "/bin/front-light.app"
 #endif
 
 #ifdef NETAGENT
-    #define PB_NETWORK_BIN NETAGENT
+#define PB_NETWORK_BIN NETAGENT
 #else
-    #define PB_NETWORK_BIN SYSTEMDATA"/bin/netagent"
+#define PB_NETWORK_BIN SYSTEMDATA "/bin/netagent"
 #endif
 
 #ifdef AUTO_CONNECT_APP
-    #define PB_AUTO_CONNECT_BIN AUTO_CONNECT_APP
+#define PB_AUTO_CONNECT_BIN AUTO_CONNECT_APP
 #else
-    #define PB_AUTO_CONNECT_BIN SYSTEMDATA"/bin/auto_connect.app"
+#define PB_AUTO_CONNECT_BIN SYSTEMDATA "/bin/auto_connect.app"
 #endif
 
 #ifdef POCKETBOOK_PRO_FW5
-    #define PB_BROWSER_SCRIPT SYSTEMDATA"/bin/webbrowser.sh"
-    #define PB_BROWSER_EXEC_SCRIPT SYSTEMDATA"/bin/run_script"
+#define PB_BROWSER_SCRIPT SYSTEMDATA "/bin/webbrowser.sh"
+#define PB_BROWSER_EXEC_SCRIPT SYSTEMDATA "/bin/run_script"
 #endif
-#define PB_BROWSER_BINARY SYSTEMDATA"/bin/browser.app"
-#define PB_BROWSER_EXEC SYSTEMDATA"/bin/openbook"
+#define PB_BROWSER_BINARY SYSTEMDATA "/bin/browser.app"
+#define PB_BROWSER_EXEC SYSTEMDATA "/bin/openbook"
 #define PB_BROWSER_QUERY_GOOGLE "https://www.google.com/search?hl=[LANG]&q="
 #define PB_BROWSER_QUERY_WIKIPEDIA "https://[LANG].wikipedia.org/?search="
 
-
 #define PB_NETWORK_TEST_URL "https://www.google.com"
 
-const char* TR(const char *label);
+const char *TR(const char *label);
 
 int getPB_keyboardType();
 int getPB_screenType();
@@ -153,8 +152,10 @@ bool isTaskManagerSupported();
 
 void executeCommand(int commandId, int commandParam);
 
-void pbLaunchWaitBinary(const char *binary, const char *param1, const char *param2, const char *param3);
-void pbLaunchWaitBinary(const char *binary, const char *param1, const char *param2);
+void pbLaunchWaitBinary(const char *binary, const char *param1,
+                        const char *param2, const char *param3);
+void pbLaunchWaitBinary(const char *binary, const char *param1,
+                        const char *param2);
 void pbLaunchWaitBinary(const char *binary, const char *param);
 void pbLaunchWaitBinary(const char *binary);
 
@@ -192,8 +193,7 @@ int getFrontLightColorValue();
 
 #endif
 
-//#ifndef BACKGROUND_CACHE_FILE_CREATION
-//#define BACKGROUND_CACHE_FILE_CREATION
-//#endif
-#endif //CR3_POCKETBOOK_H
-
+// #ifndef BACKGROUND_CACHE_FILE_CREATION
+// #define BACKGROUND_CACHE_FILE_CREATION
+// #endif
+#endif // CR3_POCKETBOOK_H
