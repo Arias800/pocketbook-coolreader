@@ -1,6 +1,8 @@
 /*
  *  CR3 for PocketBook, port by pkb
  */
+#include <cmath>
+
 #include "bmkdlg.h"
 #include "cr3main.h"
 #include "linksdlg.h"
@@ -8,14 +10,16 @@
 #include "numedit.h"
 #include "selnavig.h"
 #include "viewdlg.h"
-#include <cmath>
+// clang-format off
 #include <cr3version.h>
 #include "cr3pocketbook.h"
 #include <crengine.h>
 #include <crgui.h>
-#include <ctime>
+// clang-format on
 #include <inkview.h>
 #include <regex.h>
+
+#include <ctime>
 #ifdef POCKETBOOK_PRO
 #include <inkplatform.h>
 #ifdef POCKETBOOK_PRO_FW5
@@ -703,9 +707,7 @@ void Draw4Bits(LVDrawBuf &src, lUInt8 *dest, int x, int y, int w, int h) {
 }
 
 ibitmap *LVImageSourceRef_to_ibitmab(LVImageSourceRef &img) {
-
   if (!img.isNull()) {
-
     ibitmap *bmp = NewBitmap(img->GetWidth(), img->GetHeight());
     LVGrayDrawBuf tmpBufLock(img->GetWidth(), img->GetHeight(), bmp->depth);
 
@@ -997,7 +999,6 @@ public:
         // Match tapped icon
         int position = icon_space;
         for (int i = 0; i < TM_NB_ICONS; i++) {
-
           // If found icon
           if (x >= position && x <= position + icon_width) {
             IconTapped(i, position, CRTOUCH_DOWN_LONG);
@@ -1027,7 +1028,6 @@ public:
         // Match tapped icon
         int position = icon_space;
         for (int i = 0; i < TM_NB_ICONS; i++) {
-
           // If found icon
           if (x >= position && x <= position + icon_width) {
             IconTapped(i, position, CRTOUCH_UP);
@@ -1110,7 +1110,6 @@ public:
         CRPocketBookWindowManager::instance->getSkin()->getImage(path);
 
     if (!img.isNull()) {
-
       // Convert
       ibitmap *bmp = LVImageSourceRef_to_ibitmab(img);
 
@@ -1176,7 +1175,6 @@ public:
     // Draw top icons
     int position = icon_space;
     for (int i = 0; i < TM_NB_ICONS; i++) {
-
       // Image name
       lString16 path;
       if (strcmp(touchMenuIcons[i], "bookmarks") == 0 &&
@@ -1195,7 +1193,6 @@ public:
           CRPocketBookWindowManager::instance->getSkin()->getImage(path);
 
       if (!img.isNull()) {
-
         // Convert
         ibitmap *bmp = LVImageSourceRef_to_ibitmab(img);
 
@@ -1292,7 +1289,6 @@ public:
       LVArray<int> &sbounds = dummy;
       sbounds = main_win->getDocView()->getSectionBounds();
       if (sbounds.length() < barW / 5) {
-
         int sbound_index = 0;
         int markH = round(PanelHeight() * 0.12);
         int markW = 1;
@@ -2072,11 +2068,9 @@ protected:
 
     // RELEASE / LONG TAP
     else if (CRTOUCH_UP == evType || CRTOUCH_DOWN_LONG == evType) {
-
 // End of pinch
 #if defined(POCKETBOOK_PRO) && !defined(POCKETBOOK_PRO_PRO2)
       if (touchPointing == 2) {
-
         drawTemporaryZoom();
         // free(screenshot);
         touchPointing = 0;
@@ -2111,7 +2105,6 @@ protected:
               ScreenWidth() * MIN_PAGE_TURN_SWIPE_WIDTH &&
           CRPocketBookDocView::instance->getProps()->getIntDef(
               PROP_CTRL_PAGE_TURN_SWIPES, 1) == 1) {
-
         if (finger1.start.x - pt.x > 0)
           SendEvent(main_handler, EVT_NEXTPAGE, 0, 0);
         else
@@ -2161,7 +2154,6 @@ protected:
         }
       }
     }
-
 // MULTI
 #if defined(POCKETBOOK_PRO) && !defined(POCKETBOOK_PRO_PRO2)
     else if (CRTOUCH_MULTI_TOUCH == evType && touchPointing &&
@@ -2176,7 +2168,6 @@ protected:
       iv_mtinfo_54 *mti54; // iv_mtinfo changed starting with firmware 5.4
 
       if (inkview_GetTouchInfo && (mti = (*inkview_GetTouchInfo)())) {
-
         mti54 = (iv_mtinfo_54 *)mti;
         bool mtinfo_new = (fw_major > 5) || (fw_major == 5 && fw_minor >= 4);
         int X1 = (mtinfo_new) ? mti54[0].x : mti[0].x;
@@ -2187,7 +2178,6 @@ protected:
 
         if (touchPointing == 1) {
           if ((X1 != 0 || Y1 != 0) && (X2 != 0 || Y2 != 0)) {
-
             touchPointing = 2;
             finger1.current.x = finger1.start.x = X1;
             finger1.current.y = finger1.start.y = Y1;
@@ -2201,7 +2191,6 @@ protected:
         } else {
           if (!(X2 + Y2 == 0 || X1 + Y1 == 0 || (X1 == X2 && Y1 == Y2) ||
                 distance < 5)) {
-
             finger1.current.x = X1;
             finger1.current.y = Y1;
             finger2.current.x = X2;
@@ -2494,11 +2483,9 @@ public:
     case PB_CMD_CLEAR_CACHE:
       if (ldomDocCache::enabled() && !openedCacheFile.empty() &&
           !currentCacheDir.empty()) {
-
         // Get cache files
         LVArray<lString16> files = LVArray<lString16>();
         if (getdir(UnicodeToUtf8(currentCacheDir).c_str(), files) == 0) {
-
           lString16 skip = lString16("cr3cache.inx");
           lString16 delimiter = lString16("/");
           for (unsigned int i = 0; i < (unsigned int)files.length(); i++) {
@@ -2667,7 +2654,6 @@ public:
       sbounds = main_win->getDocView()->getSectionBoundsPages();
 
       if (sbounds.length() > 1) {
-
         _tocLength = sbounds.length() + 2;
         tocSize = _tocLength * sizeof(tocentry);
         _toc = (tocentry *)malloc(tocSize);
@@ -2686,7 +2672,6 @@ public:
         // Content
         for (int sbound_index = 0; sbound_index < sbounds.length();
              sbound_index++) {
-
           page = sbounds[sbound_index] + 1;
           if (page == prevPage) {
             continue;
@@ -3406,7 +3391,6 @@ bool CRPbDictionaryView::onTouchEvent(int x, int y,
       CRLog::trace("CRPbDictionaryView::onTouchEvent _selectedIndex=%d )",
                    _selectedIndex);
       {
-
         lvPoint pn(x, y);
         CRWindowSkinRef skin(_wm->getSkin()->getWindowSkin(_skinName.c_str()));
         CRRectSkinRef titleSkin = skin->getTitleSkin();
@@ -3421,8 +3405,8 @@ bool CRPbDictionaryView::onTouchEvent(int x, int y,
         // CRLog::trace("CRDV::onTouchEvent() titleRc ( %d, %d, %d, %d )",
         // titleRc.left, titleRc.top, titleRc.right, titleRc.bottom );
         // CRLog::trace("CRDV::onTouchEvent() clientRc( %d, %d, %d, %d )
-        // pnItm.x=%d pnItm.y=%d", clientRc.left, clientRc.top, clientRc.right,
-        // clientRc.bottom, pnItm.x, pnItm.y );
+        // pnItm.x=%d pnItm.y=%d", clientRc.left, clientRc.top,
+        // clientRc.right, clientRc.bottom, pnItm.x, pnItm.y );
 
         titleRc.bottom = titleRc.top;
         titleRc.top = clientRc.top;
@@ -3433,8 +3417,8 @@ bool CRPbDictionaryView::onTouchEvent(int x, int y,
         // CRLog::trace("CRDV::onTouchEvent() titleRc ( %d, %d, %d, %d )",
         // titleRc.left, titleRc.top, titleRc.right, titleRc.bottom );
         // CRLog::trace("CRDV::onTouchEvent() clientRc( %d, %d, %d, %d )
-        // pnItm.x=%d pnItm.y=%d", clientRc.left, clientRc.top, clientRc.right,
-        // clientRc.bottom, pnItm.x, pnItm.y );
+        // pnItm.x=%d pnItm.y=%d", clientRc.left, clientRc.top,
+        // clientRc.right, clientRc.bottom, pnItm.x, pnItm.y );
 
         int command = 0;
         lvRect tmpRc;
@@ -3478,7 +3462,8 @@ bool CRPbDictionaryView::onTouchEvent(int x, int y,
             tmpRc.left += itemWidth;
             tmpRc.right += itemWidth;
             CRLog::trace(
-                "CRDV::onTouchEvent() PB_DICT_GOOGLE tmpRc ( %d, %d, %d, %d )",
+                "CRDV::onTouchEvent() PB_DICT_GOOGLE tmpRc ( %d, %d, %d, %d "
+                ")",
                 tmpRc.left, tmpRc.top, tmpRc.right, tmpRc.bottom);
             if (tmpRc.isPointInside(pn)) {
               CRLog::trace("onTouchEvent() PB_DICT_GOOGLE %d", PB_DICT_GOOGLE);
@@ -3533,7 +3518,8 @@ bool CRPbDictionaryView::onTouchEvent(int x, int y,
             tmpRc.left += itemWidth;
             tmpRc.right += itemWidth;
             CRLog::trace(
-                "CRDV::onTouchEvent() PB_DICT_SEARCH tmpRc ( %d, %d, %d, %d )",
+                "CRDV::onTouchEvent() PB_DICT_SEARCH tmpRc ( %d, %d, %d, %d "
+                ")",
                 tmpRc.left, tmpRc.top, tmpRc.right, tmpRc.bottom);
             if (tmpRc.isPointInside(pn)) {
               CRLog::trace("onTouchEvent() PB_DICT_SEARCH %d", PB_DICT_SEARCH);
@@ -3557,7 +3543,8 @@ bool CRPbDictionaryView::onTouchEvent(int x, int y,
             tmpRc = clientRc;
             tmpRc.bottom -= clientRc.height() / 2;
             CRLog::trace(
-                "CRDV::onTouchEvent() PB_DICT_EXIT tmpRc ( %d, %d, %d, %d )",
+                "CRDV::onTouchEvent() PB_DICT_EXIT tmpRc ( %d, %d, %d, %d "
+                ")",
                 tmpRc.left, tmpRc.top, tmpRc.right, tmpRc.bottom);
             if (tmpRc.isPointInside(pn))
               command = PB_CMD_UP;
@@ -3596,7 +3583,6 @@ bool CRPbDictionaryView::onTouchEvent(int x, int y,
               int nselect = (y - clientRc.top) / pnItm.y;
 
               if (nselect >= 0 && nselect <= pgitcount) {
-
                 if (nselect != _dictMenu->getSelectedItem())
                   _dictMenu->setCurItem(nselect);
                 translate(lString16(_dictMenu->getCurItemWord()));
@@ -3714,7 +3700,6 @@ lString8 CRPbDictionaryView::createArticle(const char *word,
 #define CR_PB_DICT_REDIRECT_PREFIXES "to|of|see|from"
 lString16
 CRPbDictionaryView::detectDictionaryRedirectFor(const char *translation) {
-
   if (CRPocketBookDocView::instance->getProps()->getStringDef(
           PROP_POCKETBOOK_DICT) != lString16("Webster's 1913 Dictionary")) {
     return lString16("");
@@ -3796,7 +3781,6 @@ void CRPbDictionaryView::translate(const lString16 &w) {
     }
 
     if (_translateResult != 0) {
-
       // Check if it's a translation redirection
       lString16 redirect = detectDictionaryRedirectFor(translation);
       if (!redirect.empty()) {
@@ -4474,7 +4458,6 @@ static void loadPocketBookKeyMaps(CRGUIWindowManager &winman) {
 }
 
 void toggleInvertDisplay() {
-
   CRPropRef props = CRPocketBookDocView::instance->getProps();
   int currentMode = props->getIntDef(PROP_DISPLAY_INVERSE, 0);
 
@@ -4591,7 +4574,6 @@ void statusUpdateThread() {
   lString16 currentClock = main_win->getDocView()->getTimeString();
   int ms = 1000;
   if (currentClock != lastClock) {
-
     CRPocketBookWindowManager::instance->postCommand(DCMD_REFRESH_PAGE, 0);
     main_win->getDocView()->requestRender();
     main_win->getDocView()->checkRender();
@@ -4660,7 +4642,6 @@ void pbLaunchWaitBinary(const char *binary, const char *param) {
 void pbLaunchWaitBinary(const char *binary) { pbLaunchWaitBinary(binary, ""); }
 
 void launchBrowser(lString16 url) {
-
 #ifdef POCKETBOOK_PRO_FW5
   if (isBrowserScriptSupported()) {
     pbLaunchWaitBinary(PB_BROWSER_EXEC_SCRIPT, PB_BROWSER_SCRIPT,
@@ -5102,7 +5083,6 @@ void restoreFrontLightIfNeeded() {
 }
 int getFrontLightValue() { return min(max(GetFrontlightState(), 0), 100); }
 void setFrontLightValue(int value) {
-
   // Turn off front light
   if (value <= 0) {
     if (GetFrontlightState() > 0)
@@ -5125,7 +5105,6 @@ int getFrontLightColorValue() {
   return min(max((*inkview_GetFrontlightColor)(), 0), 100);
 }
 void setFrontLightColorValue(int value) {
-
   // Min
   if (value <= 0) {
     if ((*inkview_GetFrontlightColor)() > 0)
@@ -5156,7 +5135,6 @@ bool pbNetworkConnected() {
  * @param  action  connect/disconnect
  */
 bool pbNetwork(const char *action) {
-
   CRLog::trace("pbNetwork(%s)", action);
 
   if (strcmp(action, "connect") && pbNetworkConnected()) {
@@ -5190,7 +5168,6 @@ bool pbNetwork(const char *action) {
 void stopStandByTimer();
 void restartStandByTimer();
 void enterStandByMode() {
-
   if (isStandByMode)
     return;
 
@@ -5250,7 +5227,6 @@ void exitStandByMode() {
   restartStandByTimer();
 }
 void restartStandByTimer() {
-
   CRPropRef props = CRPocketBookDocView::instance->getProps();
   int delay = props->getIntDef(PROP_DISPLAY_STANDBY, 5);
 
@@ -5264,10 +5240,8 @@ void stopStandByTimer() { ClearTimer(enterStandByMode); }
 
 static bool need_save_cover = false;
 int main_handler(int type, int par1, int par2) {
-
   if (isStandByMode)
     switch (type) {
-
     // Events that restore the normal mode
     case EVT_PREVPAGE:
     case EVT_NEXTPAGE:
@@ -5308,7 +5282,6 @@ int main_handler(int type, int par1, int par2) {
     // CRLog::trace("COVER_OFF_SAVE");
     // CRLog::trace(USERLOGOPATH"/bookcover");
     if (need_save_cover) {
-
       // Check if it's a fresh cr3 update
       if (access(PB_FRESH_UPDATE_MARKER, F_OK) != -1) {
         Message(ICON_INFORMATION, const_cast<char *>("CoolReader"),
@@ -5321,7 +5294,6 @@ int main_handler(int type, int par1, int par2) {
         removeCustomSystemTheme();
 #endif
       }
-
 #if defined(POCKETBOOK_PRO) && !defined(POCKETBOOK_PRO_PRO2)
 
       // Else full screen update
@@ -5348,13 +5320,15 @@ int main_handler(int type, int par1, int par2) {
       // if( ScreenWidth() < ScreenHeight() ) {
 
       //     LVImageSourceRef cvrTmp =
-      //     main_win->getDocView()->getCoverPageImage(); if( !cvrTmp.isNull() )
+      //     main_win->getDocView()->getCoverPageImage(); if( !cvrTmp.isNull()
+      //     )
       //     {
       //         FillArea(0, 0, ScreenWidth(), ScreenHeight(), 0x00FFFFFF);
       //         if( cvrTmp->GetHeight() > cvrTmp->GetWidth() ) {
       //             int newWidth = ScreenWidth() * cvrTmp->GetHeight() /
       //             ScreenHeight();
-      //             // if( ScreenWidth() - newWidth <= ScreenWidth() * 0.05 ) {
+      //             // if( ScreenWidth() - newWidth <= ScreenWidth() * 0.05 )
+      //             {
       //             //     newWidth = ScreenWidth();
       //             // }
       //             cvrTmp = LVCreateStretchFilledTransform(
@@ -5368,8 +5342,8 @@ int main_handler(int type, int par1, int par2) {
       //         else {
       //             int newHeight = ScreenHeight() * cvrTmp->GetWidth() /
       //             ScreenWidth();
-      //             // if( ScreenHeight() - newHeight <= ScreenHeight() * 0.05
-      //             ) {
+      //             // if( ScreenHeight() - newHeight <= ScreenHeight() *
+      //             0.05 ) {
       //             //     newHeight = ScreenHeight();
       //             // }
       //             cvrTmp = LVCreateStretchFilledTransform(
@@ -5380,7 +5354,8 @@ int main_handler(int type, int par1, int par2) {
       //                             IMG_TRANSFORM_STRETCH
       //                             );
       //         }
-      //         cover = BitmapFromScreen(0, 0, ScreenWidth(), ScreenHeight());
+      //         cover = BitmapFromScreen(0, 0, ScreenWidth(),
+      //         ScreenHeight());
       //     }
       //     cover = LVImageSourceRef_to_ibitmab( cvrTmp );
       // }
@@ -5431,7 +5406,6 @@ int main_handler(int type, int par1, int par2) {
         libCachePath += lString8(".png");
 
         if (access(libCachePath.c_str(), F_OK) != -1) {
-
           // Load image
           LVImageSourceRef cachedFile =
               LVCreateFileCopyImageSource(lString16(libCachePath.c_str()));
@@ -5444,7 +5418,6 @@ int main_handler(int type, int par1, int par2) {
 
             // Convert to ibitmap
             if (!cachedFile.isNull()) {
-
               cover =
                   NewBitmap(cachedFile->GetWidth(), cachedFile->GetHeight());
               LVGrayDrawBuf tmpBuf(cachedFile->GetWidth(),
@@ -5469,7 +5442,6 @@ int main_handler(int type, int par1, int par2) {
 
       // If none worked - generate an ugly ass cover
       if (!cover) {
-
         LVGrayDrawBuf tmpBufCover(ScreenWidth(), ScreenHeight(),
                                   GetHardwareDepth());
 
@@ -5495,11 +5467,9 @@ int main_handler(int type, int par1, int par2) {
 
       // If somehow there is a cover
       if (cover) {
-
         // Get previous cover
         ibitmap *cover_prev = LoadBitmap(USERLOGOPATH "/bookcover");
         if (cover_prev) {
-
           // Compare covers
           if (cover->scanline * cover->height ==
                   cover_prev->scanline * cover_prev->height &&
@@ -5514,8 +5484,8 @@ int main_handler(int type, int par1, int par2) {
         if (need_save_cover) {
           CRLog::trace("Save bookcover for power off logo");
           SaveBitmap(USERLOGOPATH "/bookcover", cover);
-          // WriteStartupLogo(cover); // Not used but added here... just in case
-          // it might be needed
+          // WriteStartupLogo(cover); // Not used but added here... just in
+          // case it might be needed
           standByImage = cover;
           free(cover_prev);
         } else {
@@ -5647,7 +5617,6 @@ const char *TR(const char *label) {
 
 #if defined(POCKETBOOK_PRO) && !defined(POCKETBOOK_PRO_PRO2)
 void drawTemporaryZoom() {
-
   // Hide system panel
   hideSystemPanel(true);
 
@@ -5793,7 +5762,6 @@ void exitApp() {
 #ifdef POCKETBOOK_PRO_FW5
 
 void setCustomSystemTheme() {
-
   CRLog::trace("setCustomSystemTheme()");
   if (max(ScreenWidth(), ScreenHeight()) < 1000)
     return;
@@ -5861,7 +5829,6 @@ void setCustomSystemTheme() {
 }
 
 void removeCustomSystemTheme() {
-
   CRLog::trace("removeCustomSystemTheme()");
   if (max(ScreenWidth(), ScreenHeight()) < 1000)
     return;
@@ -5874,7 +5841,6 @@ void removeCustomSystemTheme() {
 
   CRLog::trace("removeCustomSystemTheme(): if");
   if (strcmp(currentTheme, "LineCustom") == 0) {
-
     CRLog::trace("removeCustomSystemTheme(): if: access");
     if (access(USERTHEMESPATH "/LineCustom.pbt", F_OK) != -1) {
       CRLog::trace("removeCustomSystemTheme(): if: access: unlink");
@@ -5950,7 +5916,6 @@ void getInkviewFeatures() {
   void *handle;
 
   if ((handle = dlopen("libinkview.so", RTLD_LAZY))) {
-
     // Get pointers
     *(void **)(&inkview_GetTouchInfo) = dlsym(handle, "GetTouchInfo");
 

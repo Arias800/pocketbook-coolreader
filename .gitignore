@@ -13,3 +13,6 @@ qtcreator-build
 /patches
 /000000
 *~
+# Ignore every third party lib except sqlite
+third_party/*
+!third_party/sqlite

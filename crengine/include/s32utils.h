@@ -17,17 +17,16 @@
 
 #ifdef __SYMBIAN32__
 
-#include "lvfnt.h"
 #include "lvdrawbuf.h"
+#include "lvfnt.h"
 
 #include <e32base.h>
 #include <w32std.h>
 
 /// draw gray bitmap buffer to Windows device context
-void DrawBuf2DC(CWindowGc &dc, int x, int y, LVDrawBuf * buf, unsigned long * palette, int scale=1 );
-
-
-#endif
+void DrawBuf2DC(CWindowGc &dc, int x, int y, LVDrawBuf *buf,
+                unsigned long *palette, int scale = 1);
 
 #endif
 
+#endif

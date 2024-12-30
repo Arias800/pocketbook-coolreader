@@ -1,7 +1,7 @@
 //
 // C++ Interface: bookmarks dialog
 //
-// Description: 
+// Description:
 //
 //
 // Author: Vadim Lopatin <vadim.lopatin@coolreader.org>, (C) 2008
@@ -15,25 +15,24 @@
 
 #include "fsmenu.h"
 
-class CRRecentBooksMenu : public CRFullScreenMenu
-{
+class CRRecentBooksMenu : public CRFullScreenMenu {
 private:
-    lString16 _helpText;
-    int _helpHeight;
-    LVPtrVector<CRFileHistRecord> * _files;
-    bool removeItem( int index );
-public:
-    CRRecentBooksMenu(CRGUIWindowManager * wm, LVDocView * docview, int numItems, lvRect & rc);
+  lString16 _helpText;
+  int _helpHeight;
+  LVPtrVector<CRFileHistRecord> *_files;
+  bool removeItem(int index);
 
-    virtual ~CRRecentBooksMenu() { }
+public:
+  CRRecentBooksMenu(CRGUIWindowManager *wm, LVDocView *docview, int numItems,
+                    lvRect &rc);
+
+  virtual ~CRRecentBooksMenu() {}
 
 #ifdef CR_POCKETBOOK
-    void showContextMenu();
-    void handleContextMenu(int index);
+  void showContextMenu();
+  void handleContextMenu(int index);
 #endif
-    virtual bool onCommand( int command, int params );
+  virtual bool onCommand(int command, int params);
 };
-
-
 
 #endif

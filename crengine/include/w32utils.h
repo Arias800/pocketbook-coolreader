@@ -17,18 +17,18 @@
 
 #if !defined(__SYMBIAN32__) && defined(_WIN32)
 
-#include "lvfnt.h"
 #include "lvdrawbuf.h"
+#include "lvfnt.h"
 
 extern "C" {
 #include <windows.h>
 }
 
 /// draw gray bitmap buffer to Windows device context
-void DrawBuf2DC(HDC dc, int x, int y, LVDrawBuf * buf, COLORREF * palette, int scale=1 );
+void DrawBuf2DC(HDC dc, int x, int y, LVDrawBuf *buf, COLORREF *palette,
+                int scale = 1);
 /// save gray bitmap to .BMP file
-void SaveBitmapToFile( const char * fname, LVGrayDrawBuf * bmp );
-
+void SaveBitmapToFile(const char *fname, LVGrayDrawBuf *bmp);
 
 #endif
 

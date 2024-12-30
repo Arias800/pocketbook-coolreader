@@ -13,71 +13,68 @@
 #define VIEWDLG_H_INCLUDED
 
 #include <crgui.h>
-//#ifdef WITH_DICT
+// #ifdef WITH_DICT
 #include "dictdlg.h"
 #include "sdk_compatibility.h"
-//#endif
+// #endif
 
-
-
-class CRViewDialog : public  CRDocViewWindow {
+class CRViewDialog : public CRDocViewWindow {
 protected:
-    lString8 _text;
-    LVStreamRef _stream;
-    bool _showScroll;
-    bool _showFrame;
-    int _lastNavigationDirection;
-    lString16 _searchPattern;
-	static LVRef<CRDictionary> _dict;
-    virtual void draw( int pageOffset );
-    virtual void draw();
+  lString8 _text;
+  LVStreamRef _stream;
+  bool _showScroll;
+  bool _showFrame;
+  int _lastNavigationDirection;
+  lString16 _searchPattern;
+  static LVRef<CRDictionary> _dict;
+  virtual void draw(int pageOffset);
+  virtual void draw();
+
 public:
+  int getLastNavigationDirection() { return _lastNavigationDirection; }
+  void unsetLastNavigationDirection() { _lastNavigationDirection = 0; }
 
-    int getLastNavigationDirection() { return _lastNavigationDirection; }
-    void unsetLastNavigationDirection() { _lastNavigationDirection=0; }
+  void prepareNextPageImage(int offset);
 
-    void prepareNextPageImage( int offset );
+  void
+  showWaitIcon() { /* _wm->showWaitIcon( lString16("cr3_wait_icon.png") );*/ }
+  CRGUIAcceleratorTableRef getMenuAccelerators() {
+    return _wm->getAccTables().get("menu");
+  }
+  CRGUIAcceleratorTableRef getDialogAccelerators() {
+    return _wm->getAccTables().get("dialog");
+  }
 
-    void showWaitIcon() { /* _wm->showWaitIcon( lString16("cr3_wait_icon.png") );*/ }
-    CRGUIAcceleratorTableRef getMenuAccelerators()
-    {
-        return  _wm->getAccTables().get("menu");
-    }
-    CRGUIAcceleratorTableRef getDialogAccelerators()
-    {
-        return  _wm->getAccTables().get("dialog");
-    }
+  void showGoToPageDialog();
 
-    void showGoToPageDialog();
+  void showGoToPercentDialog();
 
-    void showGoToPercentDialog();
+  bool showLinksDialog(bool backPreffered = false);
+  /// returns true if dictionaries found, shows warning window otherwise
+  bool hasDictionaries();
 
-    bool showLinksDialog(bool backPreffered = false);
-    /// returns true if dictionaries found, shows warning window otherwise
-    bool hasDictionaries();
+  void showSearchDialog();
 
-    void showSearchDialog();
+  void showDictWithVKeyboard();
 
-	void showDictWithVKeyboard();
+  bool findText(lString16 pattern, int origin, int direction);
 
-    bool findText( lString16 pattern, int origin, int direction );
+  int findPagesText(lString16 pattern, int origin, int direction);
 
-    int findPagesText( lString16 pattern, int origin, int direction );
+  bool findInDictionary(lString16 pattern);
 
-	bool findInDictionary( lString16 pattern );
+  void showKeymapDialog();
 
-    void showKeymapDialog();
+  /// adds XML and FictionBook tags for utf8 fb2 document
+  static lString8 makeFb2Xml(const lString8 &body);
+  virtual void setRect(const lvRect &rc);
+  CRViewDialog(CRGUIWindowManager *wm, lString16 title, lString8 text,
+               lvRect rect, bool showScroll, bool showFrame);
 
-
-    /// adds XML and FictionBook tags for utf8 fb2 document
-    static lString8 makeFb2Xml( const lString8 & body );
-    virtual void setRect( const lvRect & rc );
-    CRViewDialog(CRGUIWindowManager * wm, lString16 title, lString8 text, lvRect rect, bool showScroll, bool showFrame );
-
-    virtual bool onCommand( int command, int params = 0 );
+  virtual bool onCommand(int command, int params = 0);
 };
 
-const char * getCommandName( int command, int param );
-const char * getKeyName( int keyCode, int option );
+const char *getCommandName(int command, int param);
+const char *getKeyName(int keyCode, int option);
 
 #endif

@@ -1,7 +1,7 @@
 //
 // C++ Interface: selection navigation dialog
 //
-// Description: 
+// Description:
 //
 //
 // Author: Vadim Lopatin <vadim.lopatin@coolreader.org>, (C) 2008
@@ -15,19 +15,18 @@
 
 #include "mainwnd.h"
 
-/// window to show on top of DocView window, shifting/stretching DOCView content to fit
-class BackgroundFitWindow : public CRGUIWindowBase
-{
+/// window to show on top of DocView window, shifting/stretching DOCView content
+/// to fit
+class BackgroundFitWindow : public CRGUIWindowBase {
 protected:
-    CRDocViewWindow * _mainwin;
-    virtual void draw();
+  CRDocViewWindow *_mainwin;
+  virtual void draw();
+
 public:
-    BackgroundFitWindow(  CRGUIWindowManager * wm, CRDocViewWindow * mainwin )
-    : CRGUIWindowBase(wm),
-        _mainwin(mainwin)
-    {
-        _fullscreen = true;
-    }
+  BackgroundFitWindow(CRGUIWindowManager *wm, CRDocViewWindow *mainwin)
+      : CRGUIWindowBase(wm), _mainwin(mainwin) {
+    _fullscreen = true;
+  }
 };
 
 #endif

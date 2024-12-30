@@ -21,14 +21,14 @@
 
     \section main_intro Introduction
 
-    CoolReader Engine is a XML/CSS based 
+    CoolReader Engine is a XML/CSS based
     visualization library for writing e-book readers.
 
     The goal is to write fast, compact and portable library
     which allows to create e-book readers for different platform
     including handheld devices with limited resources.
-    
-    This library is partially based on CoolReader2 e-book reader, 
+
+    This library is partially based on CoolReader2 e-book reader,
     but most parts are rewritten from scratch.
 
     \b Features:
@@ -37,17 +37,21 @@
         - grayscale bitmap font engine
         - Win32 font support
         - TTF fonts support via Freetype library
-    - Text formatter with support of different paragraph and font styles, 
+    - Text formatter with support of different paragraph and font styles,
         which allows to prepare text to be drawed
     - XML parser with support of unicode (UTF-8 and UTF-16) and 8-bit encodings
     - 2 different DOM tree implementations
         - Tiny DOM - compact readonly DOM tree
-            - doesn't use RAM to store document text but reads it from file by demand
-            - doesn't store formatted text in memory, but generates it on the fly
-            - parsed tree can be saved to file to allow fast re-opening of documents
+            - doesn't use RAM to store document text but reads it from file by
+   demand
+            - doesn't store formatted text in memory, but generates it on the
+   fly
+            - parsed tree can be saved to file to allow fast re-opening of
+   documents
             - compact tree structure requires minimum amount of RAM
             - optimized element names, attribute names and values string storing
-        - Fast DOM (in progress, not included to distribution) - fast but compact read/write tree
+        - Fast DOM (in progress, not included to distribution) - fast but
+   compact read/write tree
             - editable document tree
             - faster implementation
             - optimized element names, attribute names and values string storing
@@ -87,7 +91,7 @@
 
     - Vadim Lopatin (http://www.coolreader.org/) - most source code
     - Alan (http://alreader.kms.ru/) - hyphenation sypport code
-    
+
 
     \section main_install Installation
 
@@ -105,25 +109,26 @@
 
     Please see Tools/Fb2Test/Fb2Test.cpp source code for sample code.
 
-    Library implements \a LVDocView class which can read XML document from 
+    Library implements \a LVDocView class which can read XML document from
     file and draw it in grayscale buffer.
 
     Before loading of document, you have to initialize font manager:
 
     \b InitFontManager( lString8() );
 
-    Please register fonts you want to make available using call of RegisterFont method. 
-    For bitmap font manager, parameter is filename of bitmap font.
+    Please register fonts you want to make available using call of RegisterFont
+   method. For bitmap font manager, parameter is filename of bitmap font.
 
     \b fontMan->RegisterFont( lString8(fn) );
 
     Typical usage of LVDocView:
-    - Load document using LVDocView::LoadDocument() method. 
+    - Load document using LVDocView::LoadDocument() method.
     - Call LVDocView::setStyleSheet() to set stylesheet for document.
     - Set draw buffer dimensions using LVDocView::Resize(dx, dy).
-    - LVDocView::Draw() draws document into gray buffer. 
+    - LVDocView::Draw() draws document into gray buffer.
     - \a DrawBuf2DC() can be used to draw gray bitmap in Windows device context.
-    - LVDocView::GetPos() and LVDocView::SetPos() can be used to scroll throuh document.
+    - LVDocView::GetPos() and LVDocView::SetPos() can be used to scroll throuh
+   document.
 
 
 
@@ -134,24 +139,22 @@
     GNU General Public License.
 
     See LICENSE file for details.
-    
+
 
 */
 
 #include "crsetup.h"
-#include "lvtypes.h"
-#include "lvref.h"
-#include "lvstring.h"
 #include "lvarray.h"
 #include "lvbmpbuf.h"
-#include "lvfntman.h"
-#include "lvstyles.h"
 #include "lvdocview.h"
-#include "lvstsheet.h"
 #include "lvdrawbuf.h"
+#include "lvfntman.h"
+#include "lvref.h"
+#include "lvstring.h"
+#include "lvstsheet.h"
+#include "lvstyles.h"
+#include "lvtypes.h"
 #include "props.h"
 #include "w32utils.h"
 
-
-
-#endif//CRENGINE_H_INCLUDED
+#endif // CRENGINE_H_INCLUDED

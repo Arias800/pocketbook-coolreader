@@ -10,27 +10,27 @@
 class ReadingStats {
 
 private:
-    int minSeconds;
-    int maxSeconds;
-    lString8 statsPath;
+  int minSeconds;
+  int maxSeconds;
+  lString8 statsPath;
 
-    // struct {
-    //     int
-    //     lString8 pbAction;
-    // } stats;
+  // struct {
+  //     int
+  //     lString8 pbAction;
+  // } stats;
 
-    time_t getTime();
+  time_t getTime();
 
-    lString8 getDateTimeString();
-    lString8 getDateTimeString(time_t t);
+  lString8 getDateTimeString();
+  lString8 getDateTimeString(time_t t);
 
-    void init();
+  void init();
 
 public:
-    ReadingStats(lString16 statsDir, lString16 statsFile);
-    void markUserInteraction();
-    void breakUserInteraction();
-    void save();
+  ReadingStats(lString16 statsDir, lString16 statsFile);
+  void markUserInteraction();
+  void breakUserInteraction();
+  void save();
 };
 
 #endif

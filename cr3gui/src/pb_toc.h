@@ -5,41 +5,38 @@
 #ifndef CR3_PB_TOC_H_INCLUDED
 #define CR3_PB_TOC_H_INCLUDED
 
-#include <inkview.h>
 #include "mainwnd.h"
 #include "settings.h"
+#include <inkview.h>
 
 #define PB_TOC_SAFE_CMD_RANGE 90000
 
 class V3DocViewWin;
 
 extern lString16 pbSkinFileName;
-extern V3DocViewWin * main_win;
+extern V3DocViewWin *main_win;
 
-class CRTocMenu : public CRFullScreenMenu
-{
-    protected:
-        CRPropRef props;
-        CRGUIAcceleratorTableRef _menuAccelerators;
+class CRTocMenu : public CRFullScreenMenu {
+protected:
+  CRPropRef props;
+  CRGUIAcceleratorTableRef _menuAccelerators;
 
-    public:
-        CRTocMenu( CRGUIWindowManager * wm, CRPropRef props, int id,
-            CRGUIAcceleratorTableRef menuAccelerators, lvRect & rc,
-            tocentry *tocItems, int length, int currentPage );
+public:
+  CRTocMenu(CRGUIWindowManager *wm, CRPropRef props, int id,
+            CRGUIAcceleratorTableRef menuAccelerators, lvRect &rc,
+            tocentry *tocItems, int length, int currentPage);
 
-        virtual bool onCommand( int command, int params );
+  virtual bool onCommand(int command, int params);
 
-        virtual ~CRTocMenu()
-        {
-            forcePartialBwUpdates = false;
-            CRLog::trace("Calling fontMan->gc() on Toc menu destroy");
-            fontMan->gc();
-            CRLog::trace("Done fontMan->gc() on Toc menu destroy");
-        }
+  virtual ~CRTocMenu() {
+    forcePartialBwUpdates = false;
+    CRLog::trace("Calling fontMan->gc() on Toc menu destroy");
+    fontMan->gc();
+    CRLog::trace("Done fontMan->gc() on Toc menu destroy");
+  }
 
-    private:
-        int _menuItemId;
-
+private:
+  int _menuItemId;
 };
 
-#endif //CR3_PB_TOC_H_INCLUDED
+#endif // CR3_PB_TOC_H_INCLUDED

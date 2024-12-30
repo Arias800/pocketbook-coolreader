@@ -8,5 +8,4 @@
 
 #include "resource.h"
 
-
 #endif // !defined(AFX_FONTTEST_H__828DB43C_E390_44F0_9187_665F32A6B5A8__INCLUDED_)
