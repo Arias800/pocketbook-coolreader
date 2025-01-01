@@ -560,21 +560,21 @@ typedef struct {
                     // description of previous peer element in SubCatalog table.
                     // 0, if current item is the first child of parent.
   lUInt32
-      NextPeerOffs; //[0x10] NextPeerOffs: offset from beginning of file to
-                    // the description of next peer element in SubCatalog
-                    // table. 0, if current item is the last child of parent.
-  lUInt32 ChildOffs; //[0x14] ChildOffs: offset from beginning of file to the
-                     // description of first child in SubCatalog table. 0, if
-                     // there is no subitems (in TOC) for current item.
+      NextPeerOffs;   //[0x10] NextPeerOffs: offset from beginning of file to
+                      // the description of next peer element in SubCatalog
+                      // table. 0, if current item is the last child of parent.
+  lUInt32 ChildOffs;  //[0x14] ChildOffs: offset from beginning of file to the
+                      // description of first child in SubCatalog table. 0, if
+                      // there is no subitems (in TOC) for current item.
   lUInt32 ParentOffs; //[0x18] ParentOffs: offset from beginning of file to the
                       // description of parent element in SubCatalog table. 0,
                       // if element is on level 1.
-  lUInt8 Level3Idx; //[0x1C] Level3Idx: level 3 index of element; 0 if element
-                    // is on level 1 or level 2 in TOC.
-  lUInt8 Level2Idx; //[0x1D] Level2Idx: level 2 index of element; 0 if element
-                    // is on level 1 in TOC.
-  lUInt8 Level1Idx; //[0x1E] Level1Idx: level 1 index of element.
-  lUInt8 AlignByte; //[0x1F] AlignByte: constant = 0x00.
+  lUInt8 Level3Idx;   //[0x1C] Level3Idx: level 3 index of element; 0 if element
+                      // is on level 1 or level 2 in TOC.
+  lUInt8 Level2Idx;   //[0x1D] Level2Idx: level 2 index of element; 0 if element
+                      // is on level 1 in TOC.
+  lUInt8 Level1Idx;   //[0x1E] Level1Idx: level 1 index of element.
+  lUInt8 AlignByte;   //[0x1F] AlignByte: constant = 0x00.
   lChar8 ItemName[48]; //[0x20] ItemName: name of item in TOC.
 } wol_toc_subcatalog_item;
 

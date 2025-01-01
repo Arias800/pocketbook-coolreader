@@ -333,7 +333,7 @@ V3DocViewWin::V3DocViewWin(CRGUIWindowManager *wm, lString16 dataDir)
 
 /// on starting file loading
 void V3DocViewWin::OnLoadFileStart(lString16 filename) {
-  _loadFileStart = time((time_t)0);
+  _loadFileStart = time(NULL);
 }
 
 /// format detection finished
@@ -392,7 +392,7 @@ void V3DocViewWin::OnLoadFileEnd() {}
 /// file progress indicator, called with values 0..100
 void V3DocViewWin::OnLoadFileProgress(int percent) {
   CRLog::trace("OnLoadFileProgress(%d)", percent);
-  time_t t = time((time_t)0);
+  time_t t = time(NULL);
   if (t - _loadFileStart >= SECONDS_BEFORE_PROGRESS_BAR) {
     showProgress(PROGRESS_ICON_FILE, 10 + percent / 2);
 #ifdef TRACE_DOC_MEM_STATS
@@ -403,14 +403,14 @@ void V3DocViewWin::OnLoadFileProgress(int percent) {
 
 /// document formatting started
 void V3DocViewWin::OnFormatStart() {
-  time_t t = time((time_t)0);
+  time_t t = time(NULL);
   if (t - _loadFileStart >= SECONDS_BEFORE_PROGRESS_BAR)
     showProgress(PROGRESS_ICON_FILE, 60);
 }
 
 /// document formatting finished
 void V3DocViewWin::OnFormatEnd() {
-  time_t t = time((time_t)0);
+  time_t t = time(NULL);
   if (t - _loadFileStart >= SECONDS_BEFORE_PROGRESS_BAR)
     showProgress(PROGRESS_ICON_FILE, 100);
     // Background cache file saving is disabled when
@@ -425,7 +425,7 @@ void V3DocViewWin::OnFormatEnd() {
 /// format progress, called with values 0..100
 void V3DocViewWin::OnFormatProgress(int percent) {
   CRLog::trace("OnFormatProgress(%d)", percent);
-  time_t t = time((time_t)0);
+  time_t t = time(NULL);
   if (t - _loadFileStart >= SECONDS_BEFORE_PROGRESS_BAR) {
     showProgress(PROGRESS_ICON_FILE, 60 + percent * 4 / 10);
 #ifdef TRACE_DOC_MEM_STATS

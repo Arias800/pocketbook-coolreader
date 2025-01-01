@@ -19,6 +19,7 @@
 # GETTEXT_MSGINIT_EXECUTABLE (string): path to the 'msginit' executable
 # GETTEXT_MSGCONV_EXECUTABLE (string): path to the 'msgconv' executable 
 # GETTEXT_MSGMERGE_EXECUTABLE (string): path to the 'msgmerge' executable 
+cmake_minimum_required(VERSION 3.10)
 
 set(SUCCESS 1)
 if(NOT EXISTS "${po_build_file}")
@@ -34,10 +35,10 @@ if(NOT EXISTS "${po_build_file}")
       # Initialize PO file
 
       message("Initializing PO file ${po_build_file}")
-      exec_program(${GETTEXT_MSGINIT_EXECUTABLE} 
+      execute_process(COMMAND ${GETTEXT_MSGINIT_EXECUTABLE}
+          --no-translator --input="${pot_build_file}" --output-file="${po_build_file}" --locale="${locale}"
         RETURN_VALUE msginit_return
-        OUTPUT_VARIABLE msginit_output
-        ARGS --no-translator --input="${pot_build_file}" --output-file="${po_build_file}" --locale="${locale}")
+        OUTPUT_VARIABLE msginit_output)
       if(msginit_output)
         if(NOT WIN32 OR NOT "${msginit_output}" MATCHES "Bad file desc")
           message("${msginit_output}")
@@ -51,10 +52,10 @@ if(NOT EXISTS "${po_build_file}")
         if(NOT default_po_encoding)
           set(default_po_encoding "utf-8")
         endif(NOT default_po_encoding)
-        exec_program(${GETTEXT_MSGCONV_EXECUTABLE} 
+        execute_process(COMMAND ${GETTEXT_MSGCONV_EXECUTABLE}
+            --to-code="${default_po_encoding}" ${po_build_file} --output-file="${po_build_file}"
           RETURN_VALUE msgconv_return
-          OUTPUT_VARIABLE msgconv_output
-          ARGS --output-file="${po_build_file}" --to-code="${default_po_encoding}" \"${po_build_file}\")
+          OUTPUT_VARIABLE msgconv_output)
         if(msgconv_output)
           message("${msgconv_output}")
           set(SUCCESS 0)
@@ -82,10 +83,10 @@ else(NOT EXISTS "${po_build_file}")
 
     # Merge the strings, store the result in a variable instead of a PO file
 
-    exec_program(${GETTEXT_MSGMERGE_EXECUTABLE} 
-      RETURN_VALUE msgmerge_return
-      OUTPUT_VARIABLE msgmerge_output
-      ARGS --quiet --output-file="-" \"${po_build_file}\" \"${pot_build_file}\")
+    execute_process(COMMAND ${GETTEXT_MSGMERGE_EXECUTABLE}
+        --quiet --output-file="-" ${po_build_file} ${pot_build_file}
+      RESULT_VARIABLE msgmerge_return
+      OUTPUT_VARIABLE msgmerge_output)
     if(msgmerge_return)
       message("${msgmerge_output}")
       set(SUCCESS 0)

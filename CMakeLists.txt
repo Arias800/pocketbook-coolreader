@@ -1,7 +1,5 @@
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.10)
 PROJECT(cr3)
-
-#INCLUDE(CPack)
 
 if( ${CMAKE_SYSTEM} MATCHES "Darwin" )
   message("MAC OSX build")
@@ -45,8 +43,6 @@ if (NOT DEFINED GUI)
 else ()
   message("Using GUI frontend ${GUI}\n")
 endif (NOT DEFINED GUI)
-
-
 
 # Determines whether to use external app EDICT for dictionary
 if (NOT DEFINED USE_EXTERNAL_EDICT_DICTIONARY)
@@ -97,7 +93,6 @@ endif (NOT DEFINED MAX_IMAGE_SCALE_MUL)
 ADD_DEFINITIONS( -DMAX_IMAGE_SCALE_MUL=${MAX_IMAGE_SCALE_MUL} )
 message("using MAX_IMAGE_SCALE_MUL=${MAX_IMAGE_SCALE_MUL}")
 
-
 if(MAC)
   ADD_DEFINITIONS( -DMAC=1 -DLINUX=1 -D_LINUX=1 -DCR_EMULATE_GETTEXT=1 )
 elseif ( WIN32 )
@@ -133,84 +128,17 @@ if( ${GUI} STREQUAL QT5 )
   add_definitions(${Qt5Core_DEFINITIONS})
 endif( ${GUI} STREQUAL QT5 )
 
-if (MAC)
-  message("will use zlib, libpng, libjpeg, freetype from Qt static library")
-  SET(ZLIB_INCLUDE_DIR ${QT_3RDPARTY_DIR}/zlib)
-  SET(ZLIB_LIBRARIES )
-  SET(PNG_INCLUDE_DIR ${QT_3RDPARTY_DIR}/libpng)
-  SET(PNG_LIBRARIES )
-  SET(FREETYPE_INCLUDE_DIRS ${QT_3RDPARTY_DIR}/freetype/include)
-  SET(FREETYPE_LIBRARIES )
-  SET(JPEG_INCLUDE_DIR ${QT_3RDPARTY_DIR}/libjpeg)
-  SET(JPEG_LIBRARIES )
-endif(MAC)
+# Already available in the SDK
+FIND_PACKAGE(ZLIB REQUIRED)
+FIND_PACKAGE(PNG REQUIRED)
+FIND_PACKAGE(JPEG REQUIRED)
+FIND_PACKAGE(Freetype REQUIRED)
 
-if (NOT MAC)
-if (DEFINED USE_QT_ZLIB)
-  SET(ZLIB_INCLUDE_DIR ${QT_INCLUDE_DIR}/../src/3rdparty/zlib)
-  message("Using QT ZLIB ${USE_QT_ZLIB} include dir: ${ZLIB_INCLUDE_DIR}\n")
-# SET(ZLIB_LIBRARIES "")
-else()
-
-if (NOT WIN32 AND NOT DEFINED USE_STATIC_ZLIB)
-FIND_PACKAGE(ZLIB)
-endif (NOT WIN32 AND NOT DEFINED USE_STATIC_ZLIB)
-
-if (NOT ZLIB_FOUND)
-  message("System ZLIB not found, will build local one\n")
-  #to disable #include <qconfig.h>
-  ADD_SUBDIRECTORY(third_party/zlib)
-  SET(ZLIB_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/third_party/zlib)
-  SET(ZLIB_LIBRARIES z)
-endif (NOT ZLIB_FOUND)
-endif(DEFINED USE_QT_ZLIB)
-endif(NOT MAC)
-
-if ( NOT ${GUI} STREQUAL FB2PROPS )
-if (NOT MAC)
-if (NOT WIN32 AND NOT CR3_PNG)
-FIND_PACKAGE(PNG)
-endif (NOT WIN32 AND NOT CR3_PNG)
-
-if (NOT PNG_FOUND)
-  message("System LIBPNG not found, will build local one\n")
-  INCLUDE_DIRECTORIES(${ZLIB_INCLUDE_DIR})
-  ADD_SUBDIRECTORY(third_party/libpng)
-  SET(PNG_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/third_party/libpng)
-  SET(PNG_LIBRARIES png)
-endif (NOT PNG_FOUND)
-
-if (NOT WIN32 AND NOT CR3_JPEG)
-FIND_PACKAGE(JPEG)
-endif (NOT WIN32 AND NOT CR3_JPEG)
-if (NOT JPEG_FOUND)
-  message("System LIBJPEG not found, will build local one\n")
-  ADD_SUBDIRECTORY(third_party/libjpeg)
-  SET(JPEG_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/third_party/libjpeg)
-  SET(JPEG_LIBRARIES jpeg)
-endif (NOT JPEG_FOUND)
-
-# if (NOT WIN32 AND NOT CR3_FREETYPE)
-# FIND_PACKAGE(Freetype)
-# endif (NOT WIN32 AND NOT CR3_FREETYPE)
-# if (NOT FREETYPE_FOUND)
-  # message("System FREETYPE not found, will build local one\n")
-  message("Will build local FREETYPE library\n")
-  ADD_SUBDIRECTORY(third_party/freetype)
-  SET(FREETYPE_INCLUDE_DIRS ${CMAKE_CURRENT_SOURCE_DIR}/third_party/freetype/include)
-  SET(FREETYPE_LIBRARIES freetype)
-# endif (NOT FREETYPE_FOUND)
-endif (NOT MAC)
-
-#if (ENABLE_CHM)
 message("Will build patched LIBCHM library\n")
 ADD_SUBDIRECTORY(third_party/chmlib)
 SET(CHM_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/third_party/chmlib/src)
 SET(CHM_LIBRARIES chmlib)
 ADD_DEFINITIONS(-DCHM_SUPPORT_ENABLED=1)
-#else()
-#ADD_DEFINITIONS(-DCHM_SUPPORT_ENABLED=0)
-#endif(ENABLE_CHM)
 
 message("Will build patched ANTIWORD library\n")
 ADD_DEFINITIONS(-DCR3_ANTIWORD_PATCH=1)
@@ -219,7 +147,6 @@ SET(ANTIWORD_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/third_party/antiword)
 SET(ANTIWORD_LIBRARIES antiword)
 ADD_DEFINITIONS(-DENABLE_ANTIWORD=1)
 INCLUDE_DIRECTORIES( ${ANTIWORD_INCLUDE_DIR} )
-endif ( NOT ${GUI} STREQUAL FB2PROPS )
 
 
 INCLUDE_DIRECTORIES(
@@ -244,7 +171,6 @@ else()
       ${PNG_LIBRARIES}
       ${ZLIB_LIBRARIES}
       ${CHM_LIBRARIES}
-      ${ZLIB_LIBRARIES}
       ${ANTIWORD_LIBRARIES}
       curl
       inkview
@@ -257,7 +183,6 @@ else()
       ${PNG_LIBRARIES}
       ${ZLIB_LIBRARIES}
       ${CHM_LIBRARIES}
-      ${ZLIB_LIBRARIES}
       ${ANTIWORD_LIBRARIES}
     )
   endif( DEFINED POCKETBOOK_PRO )

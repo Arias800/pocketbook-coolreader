@@ -109,92 +109,98 @@ static void reverse(lUInt32 &n) {
 #define MO_MAGIC_NUMBER 0x950412de
 #define MO_MAGIC_NUMBER_REV 0xde120495
 bool CRMoFileTranslator::openMoFile(lString16 fileName) {
-  LVStreamRef stream = LVOpenFileStream(fileName.c_str(), LVOM_READ);
-  if (stream.isNull()) {
-    CRLog::error("CRMoFileTranslator::openMoFile() - Cannot open .mo file");
-    return false;
-  }
-  bool rev = false;
-  lUInt32 magic, revision, count, srcOffset, dstOffset;
-  if (!stream->Read(&magic))
-    return false;
-  lvsize_t sz = stream->GetSize();
-  if (magic == MO_MAGIC_NUMBER_REV)
-    rev = true;
-  else if (magic != MO_MAGIC_NUMBER) {
-    CRLog::error("Magic number doesn't match for MO file");
-    return false;
-  }
-  if (!stream->Read(&revision) || !stream->Read(&count) ||
-      !stream->Read(&srcOffset) || !stream->Read(&dstOffset)) {
-    CRLog::error("Error reading MO file");
-    return false;
-  }
-  if (rev) {
-    reverse(revision);
-    reverse(count);
-    reverse(srcOffset);
-    reverse(dstOffset);
-  }
-  if (count <= 0 || count > 10000)
-    return false;
-  lvsize_t bytesRead;
-  LVArray<lUInt32> srcTable(count * 2, 0);
-  LVArray<lUInt32> dstTable(count * 2, 0);
-  lString8Collection src;
-  if (stream->SetPos(srcOffset) != srcOffset)
-    return false;
-  if (stream->Read(srcTable.get(), count * 2 * sizeof(lUInt32), &bytesRead) !=
-          LVERR_OK ||
-      bytesRead != count * 2 * sizeof(lUInt32))
-    return false;
-  if (stream->SetPos(dstOffset) != dstOffset)
-    return false;
-  if (stream->Read(dstTable.get(), count * 2 * sizeof(lUInt32), &bytesRead) !=
-          LVERR_OK ||
-      bytesRead != count * 2 * sizeof(lUInt32))
-    return false;
-  lUInt32 i;
-  if (rev) {
-    for (i = 0; i < count * 2; i++) {
-      reverse(srcTable[i]);
-      reverse(dstTable[i]);
-    }
-  }
-  for (i = 0; i < count; i++) {
-    lUInt32 len = srcTable[i * 2];
-    lUInt32 offset = srcTable[i * 2 + 1];
-    if (len >= 16384 || offset <= 0 || offset > sz - len - 1)
+  // Try to open only if file exists
+  if (LVFileExists(fileName)) {
+    CRLog::info(".mo file found : %s, trying to open it",
+                UnicodeToUtf8(fileName).c_str());
+    LVStreamRef stream = LVOpenFileStream(fileName.c_str(), LVOM_READ);
+    if (stream.isNull()) {
+      CRLog::error("CRMoFileTranslator::openMoFile() - Cannot open .mo file");
       return false;
-    lString8 s;
-    if (len) {
-      if (stream->SetPos(offset) != offset)
-        return false;
-      s.append(len, ' ');
-      if (stream->Read(s.modify(), len, &bytesRead) != LVERR_OK ||
-          bytesRead != len)
-        return false;
     }
-    src.add(s);
-  }
-  for (i = 0; i < count; i++) {
-    lUInt32 len = dstTable[i * 2];
-    lUInt32 offset = dstTable[i * 2 + 1];
-    if (len >= 16384 || offset <= 0 || offset > sz - len - 1)
+    bool rev = false;
+    lUInt32 magic, revision, count, srcOffset, dstOffset;
+    if (!stream->Read(&magic))
       return false;
-    lString8 s;
-    if (len) {
-      if (stream->SetPos(offset) != offset)
-        return false;
-      s.append(len, ' ');
-      if (stream->Read(s.modify(), len, &bytesRead) != LVERR_OK ||
-          bytesRead != len)
-        return false;
+    lvsize_t sz = stream->GetSize();
+    if (magic == MO_MAGIC_NUMBER_REV)
+      rev = true;
+    else if (magic != MO_MAGIC_NUMBER) {
+      CRLog::error("Magic number doesn't match for MO file");
+      return false;
     }
-    add(src[i], s);
+    if (!stream->Read(&revision) || !stream->Read(&count) ||
+        !stream->Read(&srcOffset) || !stream->Read(&dstOffset)) {
+      CRLog::error("Error reading MO file");
+      return false;
+    }
+    if (rev) {
+      reverse(revision);
+      reverse(count);
+      reverse(srcOffset);
+      reverse(dstOffset);
+    }
+    if (count <= 0 || count > 10000)
+      return false;
+    lvsize_t bytesRead;
+    LVArray<lUInt32> srcTable(count * 2, 0);
+    LVArray<lUInt32> dstTable(count * 2, 0);
+    lString8Collection src;
+    if (stream->SetPos(srcOffset) != srcOffset)
+      return false;
+    if (stream->Read(srcTable.get(), count * 2 * sizeof(lUInt32), &bytesRead) !=
+            LVERR_OK ||
+        bytesRead != count * 2 * sizeof(lUInt32))
+      return false;
+    if (stream->SetPos(dstOffset) != dstOffset)
+      return false;
+    if (stream->Read(dstTable.get(), count * 2 * sizeof(lUInt32), &bytesRead) !=
+            LVERR_OK ||
+        bytesRead != count * 2 * sizeof(lUInt32))
+      return false;
+    lUInt32 i;
+    if (rev) {
+      for (i = 0; i < count * 2; i++) {
+        reverse(srcTable[i]);
+        reverse(dstTable[i]);
+      }
+    }
+    for (i = 0; i < count; i++) {
+      lUInt32 len = srcTable[i * 2];
+      lUInt32 offset = srcTable[i * 2 + 1];
+      if (len >= 16384 || offset <= 0 || offset > sz - len - 1)
+        return false;
+      lString8 s;
+      if (len) {
+        if (stream->SetPos(offset) != offset)
+          return false;
+        s.append(len, ' ');
+        if (stream->Read(s.modify(), len, &bytesRead) != LVERR_OK ||
+            bytesRead != len)
+          return false;
+      }
+      src.add(s);
+    }
+    for (i = 0; i < count; i++) {
+      lUInt32 len = dstTable[i * 2];
+      lUInt32 offset = dstTable[i * 2 + 1];
+      if (len >= 16384 || offset <= 0 || offset > sz - len - 1)
+        return false;
+      lString8 s;
+      if (len) {
+        if (stream->SetPos(offset) != offset)
+          return false;
+        s.append(len, ' ');
+        if (stream->Read(s.modify(), len, &bytesRead) != LVERR_OK ||
+            bytesRead != len)
+          return false;
+      }
+      add(src[i], s);
+    }
+    sort();
+    return true;
   }
-  sort();
-  return true;
+  return false;
 }
 
 CRMoFileTranslator::CRMoFileTranslator() {}

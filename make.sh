@@ -191,7 +191,7 @@ if [ "$1" = "" -o "$1" = "pro5" ]; then
     cd ..
     if [ -f pbpro5/cr3gui/cr3-pb.app ]; then
         echo 'Strip binary'
-        "$PBDEV_DIR/SDK_481/bin/arm-obreey-linux-gnueabi-strip" "pbpro5/cr3gui/cr3-pb.app"
+        "$PBDEV_DIR/SDK_6.3.0/SDK-B288/usr/bin/arm-obreey-linux-gnueabi-strip" "pbpro5/cr3gui/cr3-pb.app"
     else
         echo 'Failed compiling binary!'
         exit

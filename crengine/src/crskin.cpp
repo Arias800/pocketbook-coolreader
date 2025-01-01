@@ -14,12 +14,11 @@
 #include "../include/crskin.h"
 #include "../include/crtrace.h"
 #include "../include/lvstsheet.h"
+#include <inkview.h>
 #include <stdlib.h>
 
 // uncomment to trace skin XML access errors / not found elements
 // #define TRACE_SKIN_ERRORS
-
-extern lString16 currentLang;
 
 class RecursionLimit {
   static int counter;
@@ -860,7 +859,7 @@ CRSkinnedItem::CRSkinnedItem()
       _fontItalic(false), _textAlign(0) {}
 
 void CRSkinnedItem::setFontFace(lString16 face) {
-  if (currentLang == "zh") {
+  if (strcmp(currentLang(), "zh") == 0) {
     face = lString16("AR PL New Sung");
   }
   if (_fontFace != face) {

@@ -1276,7 +1276,7 @@ public:
   }
 
   /// returns true for NULL pointer
-  bool isNull() const { return !this || !_data || _data->isNull(); }
+  bool isNull() const { return !_data || _data->isNull(); }
   /// returns true if object is pointer
   bool isPointer() const { return !_data->isNull() && getOffset() >= 0; }
   /// returns true if object is path (no offset specified)

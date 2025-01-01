@@ -42,6 +42,8 @@
 #define KEY_8 IV_KEY_8
 #define KEY_9 IV_KEY_9
 
+#define USERLOGOPATH USERCOMPATLOGOPATH
+
 #endif
 
 #endif

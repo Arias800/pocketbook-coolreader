@@ -9,8 +9,10 @@
     See LICENSE file for details
 */
 
+// clang-format off
 #include "../include/lvtinydom.h"
 #include "../include/hist.h"
+// clang-format on
 
 void CRFileHist::clear() { _records.clear(); }
 

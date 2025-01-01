@@ -32,6 +32,7 @@ cd "$WORK_DIR"
 # update launcher
 /bin/rm -rf "$WORK_DIR/system/bin/cr3-pb.app"
 /bin/mv "$TEMP_DIR/system/bin/cr3-pb.app" "$WORK_DIR/system/bin/cr3-pb.app"
+
 /bin/rm -rf "$WORK_DIR/application/cr3-pb.app"
 /bin/mv "$TEMP_DIR/application/cr3-pb.app" "$WORK_DIR/application/cr3-pb.app"
 

@@ -10987,7 +10987,7 @@ ldomNode *ldomNode::findChildElement(lUInt16 nsid, lUInt16 id, int index) {
 /// find child element by id path
 ldomNode *ldomNode::findChildElement(lUInt16 idPath[]) {
   ASSERT_NODE_NOT_NULL;
-  if (!this || !isElement())
+  if (!isElement())
     return NULL;
   ldomNode *elem = this;
   for (int i = 0; idPath[i]; i++) {
@@ -11177,7 +11177,7 @@ public:
 
 /// returns object image ref name
 lString16 ldomNode::getObjectImageRefName() {
-  if (!this || !isElement())
+  if (!isElement())
     return lString16::empty_str;
   // printf("ldomElement::getObjectImageSource() ... ");
   const css_elem_def_props_t *et =

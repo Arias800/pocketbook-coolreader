@@ -1,34 +1,48 @@
-# CMake toolchain file for building Pocketbook Free SDK software using
+#Config file extract from the SDK.
+set(CMAKE_SYSTEM_NAME Linux)
+set(CMAKE_SYSTEM_VERSION 1.0)
+set(CMAKE_SYSTEM_PROCESSOR armv7a)
+set(BUILD_SHARED_LIBS ON)
 
-# this one is important
-SET(CMAKE_SYSTEM_NAME Linux)
-#this one not so much
-SET(CMAKE_SYSTEM_VERSION 1)
+get_filename_component(PARENT_DIR ../../ ABSOLUTE)
+set(SDK_BASE ${PARENT_DIR}/SDK_6.3.0/SDK-B288)
 
+set(CMAKE_FIND_ROOT_PATH ${SDK_BASE}/usr/arm-obreey-linux-gnueabi/sysroot/)
+set(CMAKE_INCLUDE_PATH "/usr/include")
+message("CMAKE_FIND_ROOT_PATH=${CMAKE_FIND_ROOT_PATH}")
+set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
+set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
+set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
+set(FREETYPE_INCLUDE_DIRS ${SDK_BASE}/usr/arm-obreey-linux-gnueabi/sysroot/usr/include/freetype2)
+list(APPEND CMAKE_MODULE_PATH ${SDK_BASE}/usr/share/cmake/modules)
+list(REMOVE_DUPLICATES CMAKE_MODULE_PATH)
 
-SET (TOOLCHAIN_PATH "../../SDK_481")
-SET (TOOLCHAIN_PREFIX "arm-obreey-linux-gnueabi")
-SET (TOOLCHAIN_INSTALL "sysroot/usr")
-ADD_DEFINITIONS(-DPLATFORM_FC -std=c++11)
+set(QT_QMAKE_EXECUTABLE ${SDK_BASE}/usr/arm-obreey-linux-gnueabi/sysroot/usr/qt5/bin/qmake)
+set(CMAKE_PREFIX_PATH ${SDK_BASE}/usr/arm-obreey-linux-gnueabi/sysroot/ebrmain/lib/cmake)
 
+set(CMAKE_C_COMPILER ${SDK_BASE}/usr/bin/arm-obreey-linux-gnueabi-clang)
+set(CMAKE_CXX_COMPILER ${SDK_BASE}/usr/bin/arm-obreey-linux-gnueabi-clang++)
+set(CMAKE_C_FLAGS "-fsigned-char -Werror-return-type" CACHE STRING "" FORCE)
+set(CMAKE_CXX_FLAGS "-fsigned-char -Werror-return-type" CACHE STRING "" FORCE)
 
-# specify the cross compiler
-SET(CMAKE_INSTALL_PREFIX "${TOOLCHAIN_PATH}/${TOOLCHAIN_PREFIX}/${TOOLCHAIN_INSTALL}" CACHE PATH "Install path prefix" FORCE)
+set(CMAKE_CXX_FLAGS_RELEASE "-DNDEBUG -O2 -pipe -fomit-frame-pointer -march=armv7-a -mtune=cortex-a8 -mfpu=neon -mfloat-abi=softfp " CACHE STRING "" FORCE)
+set(CMAKE_C_FLAGS_RELEASE "-DNDEBUG -O2 -pipe -fomit-frame-pointer -march=armv7-a -mtune=cortex-a8 -mfpu=neon -mfloat-abi=softfp " CACHE STRING "" FORCE)
+set(CMAKE_C_FLAGS_DEBUG "-DDEBUG -O0 -g -pipe -fomit-frame-pointer -march=armv7-a -mtune=cortex-a8 -mfpu=neon -mfloat-abi=softfp " CACHE STRING "" FORCE)
+set(CMAKE_CXX_FLAGS_DEBUG "-DDEBUG -O0 -g -pipe -fomit-frame-pointer -march=armv7-a -mtune=cortex-a8 -mfpu=neon -mfloat-abi=softfp " CACHE STRING "" FORCE)
+set(CMAKE_EXE_LINKER_FLAGS_RELEASE "-s" CACHE STRING "" FORCE)
+set(CMAKE_SHARED_LINKER_FLAGS_RELEASE "-s" CACHE STRING "" FORCE)
+set(CMAKE_SHARED_LINKER_FLAGS "-Wl,-z,defs" CACHE STRING "" FORCE)
 
-SET (CMAKE_C_COMPILER ${CMAKE_CURRENT_SOURCE_DIR}/${TOOLCHAIN_PATH}/bin/${TOOLCHAIN_PREFIX}-gcc)
-SET (CMAKE_CXX_COMPILER ${CMAKE_CURRENT_SOURCE_DIR}/${TOOLCHAIN_PATH}/bin/${TOOLCHAIN_PREFIX}-g++)
-SET (CMAKE_LINK ${CMAKE_CURRENT_SOURCE_DIR}/${TOOLCHAIN_PATH}/bin/${TOOLCHAIN_PREFIX}-g++)
-SET (CMAKE_ARR ${CMAKE_CURRENT_SOURCE_DIR}/${TOOLCHAIN_PATH}/bin/${TOOLCHAIN_PREFIX}-arr)
-SET (CMAKE_STRIP ${TOOLCHAIN_PATH}/bin/${TOOLCHAIN_PREFIX}-strip)
+add_definitions(-DPLATFORM_FC)
+set(PB_PLATFORM "ARM" CACHE STRING "ARM|PC Readonly!")
 
-# where is the target environment 
-SET(CMAKE_FIND_ROOT_PATH  ${CMAKE_CURRENT_SOURCE_DIR}/${TOOLCHAIN_PATH}/${TOOLCHAIN_PREFIX}/${TOOLCHAIN_INSTALL})
-
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/${TOOLCHAIN_PATH}/include/c++/4.1.2)
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/${TOOLCHAIN_PATH}/include)
-
-# search for programs in the build host directories
-SET(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
-# for libraries and headers in the target directories
-SET(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
-SET(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
+set(CMAKE_INSTALL_PREFIX ${SDK_BASE}/usr/arm-obreey-linux-gnueabi/sysroot/usr/local CACHE PATH "Installation Prefix")
+set(CMAKE_BUILD_TYPE Release CACHE STRING "Debug|Release|RelWithDebInfo|MinSizeRel")
+set(ENV{PKG_CONFIG_DIR} "")
+set(ENV{PKG_CONFIG_LIBDIR} ${CMAKE_FIND_ROOT_PATH}/usr/lib/pkgconfig)
+set(ENV{PKG_CONFIG_SYSROOT_DIR} ${CMAKE_FIND_ROOT_PATH})
+set(ENV{LD_LIBRARY_PATH} ${SDK_BASE}/usr/lib)
+list(APPEND PB_LINK_DIRECTORIES ${SDK_BASE}/usr/arm-obreey-linux-gnueabi/sysroot/usr/lib)
+list(APPEND PB_LINK_DIRECTORIES ${SDK_BASE}/usr/arm-obreey-linux-gnueabi/sysroot/usr/local/lib)
+list(APPEND PB_INCLUDE_DIRECTORIES ${SDK_BASE}/usr/arm-obreey-linux-gnueabi/sysroot/usr/include)
+set(PBRES ${SDK_BASE}/usr/bin/pbres)

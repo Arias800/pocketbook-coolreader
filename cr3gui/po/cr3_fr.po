@@ -19,1917 +19,1445 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: ../src/citedlg.cpp:194
-msgid "Select next/prev paragraph"
-msgstr "Sélectionner paragraphe suiv./prec. "
-
-#: ../src/citedlg.cpp:197
-msgid "Select one more paragraph"
-msgstr "Sélectionner un paragraphe de plus"
-
-#: ../src/citedlg.cpp:200
-msgid "Deselect paragraph"
-msgstr "Désélectionner le paragraphe"
-
-#: ../src/citedlg.cpp:203
-msgid "Select one more phrase"
-msgstr "Sélectionner une phrase de plus"
-
-#: ../src/citedlg.cpp:206
-msgid "Deselect phrase"
-msgstr "Désélectionner la phrase"
-
-#: ../src/citedlg.cpp:220
-msgid "Select text"
-msgstr "Sélectionner le texte"
-
-#: ../src/fsmenu.cpp:41
-msgid "1..9"
-msgstr "1..9"
-
-#: ../src/fsmenu.cpp:43
-msgid "1..8"
-msgstr "1..8"
-
-#: ../src/mainwnd.cpp:810
-msgid "No manual currently available for this language, sorry!"
-msgstr ""
-"Il n'y a pas actuellement de manuel disponible pour cette langue, désolé !"
-
-#: ../src/mainwnd.cpp:821 ../src/mainwnd.cpp:931
-msgid "Help"
-msgstr "Aide"
-
-#: ../src/mainwnd.cpp:848
-msgid "Main Menu"
-msgstr "Menu principal"
-
-#: ../src/mainwnd.cpp:882 ../src/viewdlg.cpp:573
-msgid "About"
-msgstr "A propos"
-
-#: ../src/mainwnd.cpp:892 ../src/viewdlg.cpp:537
-msgid "Go to page"
-msgstr "Aller à la page"
-
-#: ../src/mainwnd.cpp:903 ../src/recentdlg.cpp:115
-msgid "Open recent book"
-msgstr "Ouvrir un livre récent"
-
-#: ../src/mainwnd.cpp:909 ../src/viewdlg.cpp:164
-msgid "Dictionary"
-msgstr "Dictionnaire"
-
-#: ../src/mainwnd.cpp:914 ../src/settings.cpp:1500
-msgid "Cite"
-msgstr "Citer"
-
-#: ../src/mainwnd.cpp:918 ../src/bmkdlg.cpp:182
-msgid "Bookmarks"
-msgstr "Marque-pages"
-
-#: ../src/mainwnd.cpp:922 ../src/viewdlg.cpp:221
-msgid "Search"
-msgstr "Recherche"
-
-#: ../src/mainwnd.cpp:926 ../src/settings.cpp:1063
-msgid "Settings"
-msgstr "Paramètres"
-
-#: ../src/mainwnd.cpp:935 ../src/viewdlg.cpp:672
-msgid "Keyboard layout"
-msgstr "Configuration du clavier"
-
-#: ../src/mainwnd.cpp:942
-msgid ""
-"$1 - choose command\n"
-"$2, $3 - close"
-msgstr ""
-"$1 - choisir commande\n"
-"$2, $3 - fermer"
-
-#: ../src/mainwnd.cpp:1054
-msgid "Current page"
-msgstr "Page actuelle"
-
-#: ../src/mainwnd.cpp:1055
-msgid "Total pages"
-msgstr "Pages totales"
-
-#: ../src/mainwnd.cpp:1056
-msgid "Battery state"
-msgstr "État de la batterie"
-
-#: ../src/mainwnd.cpp:1056
-msgid "charging..."
-msgstr "chargement..."
+#~ msgid "Select next/prev paragraph"
+#~ msgstr "Sélectionner paragraphe suiv./prec. "
 
-#: ../src/mainwnd.cpp:1057
-msgid "Current Time"
-msgstr "Heure actuelle"
+#~ msgid "Select one more paragraph"
+#~ msgstr "Sélectionner un paragraphe de plus"
 
-#: ../src/mainwnd.cpp:1062
-msgid "Current chapter"
-msgstr "Chapitre actuel"
+#~ msgid "Deselect paragraph"
+#~ msgstr "Désélectionner le paragraphe"
 
-#: ../src/mainwnd.cpp:1065
-msgid "Status"
-msgstr "Status"
+#~ msgid "Select one more phrase"
+#~ msgstr "Sélectionner une phrase de plus"
 
-#: ../src/mainwnd.cpp:1068
-msgid "Archive name"
-msgstr "Nom d'archive"
+#~ msgid "Deselect phrase"
+#~ msgstr "Désélectionner la phrase"
 
-#: ../src/mainwnd.cpp:1069
-msgid "Archive path"
-msgstr "Chemin de l'archive"
+#~ msgid "Select text"
+#~ msgstr "Sélectionner le texte"
 
-#: ../src/mainwnd.cpp:1070
-msgid "Archive size"
-msgstr "Taille de l'archive"
+#~ msgid "1..9"
+#~ msgstr "1..9"
 
-#: ../src/mainwnd.cpp:1071
-msgid "File name"
-msgstr "Nom de fichier"
+#~ msgid "1..8"
+#~ msgstr "1..8"
 
-#: ../src/mainwnd.cpp:1072
-msgid "File path"
-msgstr "Chemin du fichier"
+#~ msgid "No manual currently available for this language, sorry!"
+#~ msgstr ""
+#~ "Il n'y a pas actuellement de manuel disponible pour cette langue, désolé !"
 
-#: ../src/mainwnd.cpp:1073
-msgid "File size"
-msgstr "Taille du fichier"
+#~ msgid "Help"
+#~ msgstr "Aide"
 
-#: ../src/mainwnd.cpp:1074
-msgid "File format"
-msgstr "Format du fichier"
+#~ msgid "Main Menu"
+#~ msgstr "Menu principal"
 
-#: ../src/mainwnd.cpp:1075
-msgid "File info"
-msgstr "Information du fichier"
+#~ msgid "About"
+#~ msgstr "A propos"
 
-#: ../src/mainwnd.cpp:1078
-msgctxt "Book"
-msgid "Title"
-msgstr "Titre"
-
-#: ../src/mainwnd.cpp:1079
-msgid "Author(s)"
-msgstr "Auteur(s)"
-
-#: ../src/mainwnd.cpp:1080
-msgid "Series name"
-msgstr "Nom de la série"
-
-#: ../src/mainwnd.cpp:1081
-msgid "Series number"
-msgstr "Numéro de série"
-
-#: ../src/mainwnd.cpp:1082
-msgid "Date"
-msgstr "Date"
-
-#: ../src/mainwnd.cpp:1083
-msgid "Genres"
-msgstr "Genres"
-
-#: ../src/mainwnd.cpp:1084
-msgid "Language"
-msgstr "Langue"
-
-#: ../src/mainwnd.cpp:1085
-msgid "Translator"
-msgstr "Traducteur"
-
-#: ../src/mainwnd.cpp:1086
-msgid "Source language"
-msgstr "Langue source"
-
-#: ../src/mainwnd.cpp:1087
-msgid "Book info"
-msgstr "Information du livre"
-
-#: ../src/mainwnd.cpp:1090
-msgid "Document author"
-msgstr "Auteur du document"
-
-#: ../src/mainwnd.cpp:1091
-msgid "Document date"
-msgstr "Date du document"
-
-#: ../src/mainwnd.cpp:1092
-msgid "Document source URL"
-msgstr "URL de la source du document"
-
-#: ../src/mainwnd.cpp:1093
-msgid "OCR by"
-msgstr "OCR par"
-
-#: ../src/mainwnd.cpp:1094
-msgid "Document version"
-msgstr "Version du document"
-
-#: ../src/mainwnd.cpp:1095
-msgid "Change history"
-msgstr "Historique des modifications"
-
-#: ../src/mainwnd.cpp:1096
-msgid "ID"
-msgstr "ID"
-
-#: ../src/mainwnd.cpp:1097
-msgid "Program used"
-msgstr "Programme utilisé"
-
-#: ../src/mainwnd.cpp:1098
-msgid "Document info"
-msgstr "Informations sur le document"
-
-#: ../src/mainwnd.cpp:1101
-msgid "Publication name"
-msgstr "Nom de publication"
-
-#: ../src/mainwnd.cpp:1102
-msgid "Publisher"
-msgstr "Editeur"
-
-#: ../src/mainwnd.cpp:1103
-msgid "Publisher city"
-msgstr "Ville d'édition"
-
-#: ../src/mainwnd.cpp:1104
-msgid "Publication year"
-msgstr "Année d'édition"
-
-#: ../src/mainwnd.cpp:1105
-msgid "ISBN"
-msgstr "ISBN"
-
-#: ../src/mainwnd.cpp:1106
-msgid "Publication info"
-msgstr "Info de publication"
-
-#: ../src/mainwnd.cpp:1108
-msgid "Custom info"
-msgstr "Informations courantes"
-
-#: ../src/mainwnd.cpp:1112
-msgid "CoolReader for PocketBook"
-msgstr "CoolReader pour PocketBook"
-
-#: ../src/mainwnd.cpp:1113
-msgid "Build date"
-msgstr "Date de création"
-
-#: ../src/mainwnd.cpp:1114
-msgid "Build type"
-msgstr "Type de construction"
-
-#: ../src/mainwnd.cpp:1115
-msgid "About program"
-msgstr "A propos du programme"
-
-#: ../src/mainwnd.cpp:1118
-msgid "Hardware type"
-msgstr "Type de matériel"
-
-#: ../src/mainwnd.cpp:1119
-msgid "Firmware version"
-msgstr "Version du firmware"
-
-#: ../src/mainwnd.cpp:1120
-msgid "Keyboard type"
-msgstr "Type du clavier"
-
-#: ../src/mainwnd.cpp:1121
-msgid "Screen type"
-msgstr "Type d'écran"
-
-#: ../src/mainwnd.cpp:1122
-msgid "Config file"
-msgstr "Fichier de configuration"
-
-#: ../src/mainwnd.cpp:1123
-msgid "Keymap file"
-msgstr "Fichier Keymap"
-
-#: ../src/mainwnd.cpp:1124
-msgid "Skin file"
-msgstr "Fichier d'habillage"
-
-#: ../src/mainwnd.cpp:1125
-msgid "Debug information"
-msgstr "Information de deboggage"
-
-#: ../src/mainwnd.cpp:1276
-msgid "Loading: please wait..."
-msgstr "Chargement : attendez s'il vous plait..."
-
-#: ../src/recentdlg.cpp:97
-msgid "Open book"
-msgstr "Ouvrir livre"
-
-#: ../src/recentdlg.cpp:98
-msgid "Delete record"
-msgstr "Effacer enregistrement"
-
-#: ../src/recentdlg.cpp:133
-msgid ""
-"$1 - open book\n"
-"$2, $3 - close"
-msgstr ""
-"$1 - ouvrir livre\n"
-"$2, $3 - fermer"
-
-#: ../src/tocdlg.cpp:150
-msgid "Current page: $1 of $2\n"
-msgstr "Page actuelle : $1 de $2\n"
-
-#: ../src/tocdlg.cpp:153
-msgid "Enter page number:"
-msgstr "Entrer un numéro de page :"
-
-#: ../src/bmkdlg.cpp:19
-msgid "Empty slot"
-msgstr "Emplacement vide"
-
-#: ../src/bmkdlg.cpp:45
-msgid "Page $1 ($2%)"
-msgstr "Page $1 ($2%)"
-
-#: ../src/bmkdlg.cpp:68 ../src/bmkdlg.cpp:161
-msgid "Go to bookmark"
-msgstr "Aller au marque-page"
-
-#: ../src/bmkdlg.cpp:72
-msgid ""
-"Short press $1 - go to bookmark,\n"
-"$2 - switch to SET mode"
-msgstr ""
-"Appui court $1 - aller au marque-page,\n"
-"$2 - passer en mode réglage"
-
-#: ../src/bmkdlg.cpp:73
-msgid ""
-"Short press $1 - go to bookmark,\n"
-"long press - set bookmark"
-msgstr ""
-"Appui court $1 - aller au marque-page,\n"
-"appui long - définir marque-page"
-
-#: ../src/bmkdlg.cpp:76 ../src/bmkdlg.cpp:160 ../src/viewdlg.cpp:590
-msgid "Set bookmark"
-msgstr "Définir marque-page"
-
-#: ../src/bmkdlg.cpp:80
-msgid ""
-"$1 - set bookmark,\n"
-"$2 - switch to GO mode"
-msgstr ""
-"$1 - définir marque-page\n"
-"$2 - passer en mode GO"
-
-#: ../src/bmkdlg.cpp:81
-msgid ""
-"Short press $1 - set bookmark,\n"
-"long press - go to bookmark"
-msgstr ""
-"Appui court $1 - définir marque-page,\n"
-"appui long - aller au marque-page"
-
-#: ../src/bmkdlg.cpp:162 ../src/viewdlg.cpp:591
-msgid "Delete bookmark"
-msgstr "Effacer le marque-page"
-
-#: ../src/bmkdlg.cpp:316
-msgid "Go to citation"
-msgstr "Aller à la citation"
-
-#: ../src/bmkdlg.cpp:317
-msgid "Delete citation"
-msgstr "Effacer la citation"
-
-#: ../src/bmkdlg.cpp:332
-msgid "Citations"
-msgstr "Citations"
-
-#: ../src/bmkdlg.cpp:448 ../src/viewdlg.cpp:574
-msgid "Cite selection dialog"
-msgstr "Sélection du texte à citer"
-
-#: ../src/dictdlg.cpp:80
-msgid "From dictionary "
-msgstr "Depuis le dictionnaire"
-
-#: ../src/dictdlg.cpp:89
-msgid "[cannot read article]"
-msgstr "[Ne peut lire l'article]"
-
-#: ../src/settings.cpp:204
-msgid "choose command"
-msgstr "choisir une commande"
-
-#: ../src/settings.cpp:222
-msgid "Controls"
-msgstr "Contrôles"
-
-#: ../src/settings.cpp:388
-msgid "(No action)"
-msgstr "(pas d'action)"
-
-#: ../src/settings.cpp:541
-msgid "[Command is not assigned]"
-msgstr "[Pas de commande аssignée]"
-
-#: ../src/settings.cpp:562
-msgid "0` (Portrait)"
-msgstr "0` (Portrait)"
-
-#: ../src/settings.cpp:563
-msgid "90 `"
-msgstr "90 `"
-
-#: ../src/settings.cpp:564
-msgid "180 `"
-msgstr "180 `"
-
-#: ../src/settings.cpp:565
-msgid "270 `"
-msgstr "270 `"
-
-#: ../src/settings.cpp:576
-msgid "Page orientation"
-msgstr "Orientation de la page"
-
-#: ../src/settings.cpp:597
-msgid "Default font size"
-msgstr "Taille de la police par défaut"
-
-#: ../src/settings.cpp:652
-msgid "The quick brown fox jumps over lazy dog"
-msgstr "Le rapide renard marron saute par dessus le chien fainéant "
-
-#: ../src/settings.cpp:832
-msgid "Justify"
-msgstr "Justifié"
-
-#: ../src/settings.cpp:833
-msgctxt "CSS"
-msgid "Left"
-msgstr "Gauche"
-
-#: ../src/settings.cpp:834
-msgid "Center"
-msgstr "Centre"
-
-#: ../src/settings.cpp:835
-msgctxt "CSS"
-msgid "Right"
-msgstr "Droit"
-
-#: ../src/settings.cpp:841
-msgid "No indent"
-msgstr "Pas de retrait"
-
-#: ../src/settings.cpp:842
-msgid "Small indent"
-msgstr "Léger retrait droit"
-
-#: ../src/settings.cpp:843
-msgid "Big indent"
-msgstr "Grand retrait droit"
-
-#: ../src/settings.cpp:844
-msgid "Small outdent"
-msgstr "Léger retrait droit"
-
-#: ../src/settings.cpp:845
-msgid "Big outdent"
-msgstr "Grand retrait gauche"
-
-#: ../src/settings.cpp:851
-msgid "[Default sans-serif font]"
-msgstr "[Police sans-serif par défaut]"
-
-#: ../src/settings.cpp:852
-msgid "[Default serif font]"
-msgstr "[Police serif par défaut]"
-
-#: ../src/settings.cpp:853
-msgid "[Default monospace font]"
-msgstr "[Police monospace par défaut]"
-
-#: ../src/settings.cpp:859
-msgid "Bigger (105%)"
-msgstr "Plus grand (105%)"
-
-#: ../src/settings.cpp:860
-msgid "Bigger (110%)"
-msgstr "Plus grand (110%)"
-
-#: ../src/settings.cpp:861
-msgid "Bigger (115%)"
-msgstr "Plus grand (115%)"
-
-#: ../src/settings.cpp:862
-msgid "Bigger (120%)"
-msgstr "Plus grand (120%)"
-
-#: ../src/settings.cpp:863
-msgid "Bigger (150%)"
-msgstr "Plus grand (150%)"
-
-#: ../src/settings.cpp:864
-msgid "Smaller (95%)"
-msgstr "Plus petit (95%)"
-
-#: ../src/settings.cpp:865
-msgid "Smaller (90%)"
-msgstr "Plus petit (90%)"
-
-#: ../src/settings.cpp:866
-msgid "Smaller (85%)"
-msgstr "Plus petit (85%)"
-
-#: ../src/settings.cpp:867
-msgid "Smaller (80%)"
-msgstr "Plus petit (80%)"
-
-#: ../src/settings.cpp:868
-msgid "Smaller (70%)"
-msgstr "Plus petit (70%)"
-
-#: ../src/settings.cpp:869
-msgid "Smaller (60%)"
-msgstr "Plus petit (60%)"
-
-#: ../src/settings.cpp:875 ../src/settings.cpp:884 ../src/settings.cpp:1172
-#: ../src/settings.cpp:1178
-msgid "Normal"
-msgstr "Normal"
-
-#: ../src/settings.cpp:876 ../src/settings.cpp:1179
-msgid "Bold"
-msgstr "Gras"
-
-#: ../src/settings.cpp:877
-msgid "Bolder"
-msgstr "Plus gras"
-
-#: ../src/settings.cpp:878
-msgid "Lighter"
-msgstr "Plus léger"
-
-#: ../src/settings.cpp:885
-msgid "Italic"
-msgstr "Italique"
-
-#: ../src/settings.cpp:920 ../src/settings.cpp:1099
-msgid "None"
-msgstr "Aucun"
-
-#: ../src/settings.cpp:921 ../src/settings.cpp:1101
-msgid "Underline"
-msgstr "Souligner"
-
-#: ../src/settings.cpp:922
-msgid "Line through"
-msgstr "Ligne au travers"
-
-#: ../src/settings.cpp:923
-msgid "Overline"
-msgstr "Trait suscrit"
-
-#: ../src/settings.cpp:929
-msgid "Baseline"
-msgstr "Base"
-
-#: ../src/settings.cpp:930
-msgid "Subscript"
-msgstr "indice"
-
-#: ../src/settings.cpp:931
-msgid "Superscript"
-msgstr "Exposant"
-
-#: ../src/settings.cpp:937 ../src/settings.cpp:945
-msgid "Black"
-msgstr "Noir"
-
-#: ../src/settings.cpp:938 ../src/settings.cpp:946
-msgid "Gray"
-msgstr "Gris"
-
-#: ../src/settings.cpp:939 ../src/settings.cpp:947
-msgid "White"
-msgstr "Blanc"
-
-#: ../src/settings.cpp:954 ../src/settings.cpp:965
-msgid "0.2 of line height"
-msgstr "0.2 d'hauteur de ligne"
-
-#: ../src/settings.cpp:955 ../src/settings.cpp:966
-msgid "0.3 of line height"
-msgstr "0.3 d'hauteur de ligne"
-
-#: ../src/settings.cpp:956 ../src/settings.cpp:967 ../src/settings.cpp:976
-#: ../src/settings.cpp:992
-msgid "0.5 of line height"
-msgstr "0.5 d'hauteur de ligne"
-
-#: ../src/settings.cpp:957 ../src/settings.cpp:968 ../src/settings.cpp:977
-#: ../src/settings.cpp:993
-msgid "1 line height"
-msgstr "1 hauteur de ligne"
-
-#: ../src/settings.cpp:958 ../src/settings.cpp:969 ../src/settings.cpp:979
-#: ../src/settings.cpp:995
-msgid "2 of line height"
-msgstr "2 de hauteur de ligne"
-
-#: ../src/settings.cpp:978 ../src/settings.cpp:994
-msgid "1.5 of line height"
-msgstr "1.5 d'hauteur de ligne"
-
-#: ../src/settings.cpp:980 ../src/settings.cpp:996
-msgid "4 of line height"
-msgstr "4 de hauteur de ligne"
-
-#: ../src/settings.cpp:981 ../src/settings.cpp:997
-msgid "5% of line width"
-msgstr "5% de largeur de ligne"
-
-#: ../src/settings.cpp:982 ../src/settings.cpp:998
-msgid "10% of line width"
-msgstr "10% de largeur de ligne"
-
-#: ../src/settings.cpp:983 ../src/settings.cpp:999
-msgid "15% of line width"
-msgstr "15% de largeur de ligne"
-
-#: ../src/settings.cpp:984 ../src/settings.cpp:1000
-msgid "20% of line width"
-msgstr "20% de largeur de ligne"
-
-#: ../src/settings.cpp:985 ../src/settings.cpp:1001
-msgid "30% of line width"
-msgstr "30% de largeur de ligne"
-
-#: ../src/settings.cpp:1004
-msgid "Text alignment"
-msgstr "Alignement du texte"
-
-#: ../src/settings.cpp:1006
-msgid "First line indent"
-msgstr "Retrait de première ligne"
-
-#: ../src/settings.cpp:1009 ../src/settings.cpp:1663
-msgid "Font face"
-msgstr "Police avant"
-
-#: ../src/settings.cpp:1023
-msgid "Font size"
-msgstr "Taille de la police"
-
-#: ../src/settings.cpp:1025 ../src/settings.cpp:1557 ../src/settings.cpp:1672
-msgid "Font weight"
-msgstr "Épaisseur de la police "
-
-#: ../src/settings.cpp:1027
-msgid "Font style"
-msgstr "Style de la police"
-
-#: ../src/settings.cpp:1029 ../src/settings.cpp:1586
-msgid "Interline space"
-msgstr "Espace d'interligne"
-
-#: ../src/settings.cpp:1031
-msgid "Letter spacing"
-msgstr "Espacement des lettres"
-
-#: ../src/settings.cpp:1033
-msgid "Text decoration"
-msgstr "Habillage texte"
-
-#: ../src/settings.cpp:1035
-msgid "Text vertical alignment"
-msgstr "Alignement vertical du texte"
-
-#: ../src/settings.cpp:1037
-msgid "Text color"
-msgstr "Couleur du texte"
-
-#: ../src/settings.cpp:1039
-msgid "Background color"
-msgstr "Couleur d'arrière plan"
-
-#: ../src/settings.cpp:1041
-msgid "Margin before"
-msgstr "Marge avant"
-
-#: ../src/settings.cpp:1043
-msgid "Margin after"
-msgstr "Marge après"
-
-#: ../src/settings.cpp:1045
-msgid "Margin left"
-msgstr "Marge gauche"
-
-#: ../src/settings.cpp:1047
-msgid "Margin right"
-msgstr "Marge droite"
-
-#: ../src/settings.cpp:1080
-msgid "On for all fonts"
-msgstr "Appliquer pour toutes les fontes"
-
-#: ../src/settings.cpp:1081
-msgid "On for big fonts only"
-msgstr "Appliquer pour les grosses polices seulement"
-
-#: ../src/settings.cpp:1082 ../src/settings.cpp:1088 ../src/settings.cpp:1192
-#: ../src/settings.cpp:1325 ../src/settings.cpp:1351
-msgid "Off"
-msgstr "Désactivé"
-
-#: ../src/settings.cpp:1087
-msgid "On"
-msgstr "Activé"
-
-#: ../src/settings.cpp:1093
-msgid "AM/PM"
-msgstr "AM/PM"
-
-#: ../src/settings.cpp:1094
-msgid "24h"
-msgstr "24h"
-
-#: ../src/settings.cpp:1100
-msgid "Solid"
-msgstr "Solide"
-
-#: ../src/settings.cpp:1173
-msgid "Inverse"
-msgstr "Inverser"
-
-#: ../src/settings.cpp:1184
-msgid "One"
-msgstr "Un"
-
-#: ../src/settings.cpp:1185
-msgid "Two"
-msgstr "Deux"
-
-#: ../src/settings.cpp:1190
-msgid "Top"
-msgstr "Haut"
-
-#: ../src/settings.cpp:1197
-msgid "70%"
-msgstr "70%"
-
-#: ../src/settings.cpp:1198
-msgid "75%"
-msgstr "75%"
-
-#: ../src/settings.cpp:1199
-msgid "80%"
-msgstr "80%"
-
-#: ../src/settings.cpp:1200
-msgid "85%"
-msgstr "85%"
-
-#: ../src/settings.cpp:1201
-msgid "90%"
-msgstr "90%"
-
-#: ../src/settings.cpp:1202
-msgid "95%"
-msgstr "95%"
-
-#: ../src/settings.cpp:1203
-msgid "100%"
-msgstr "100%"
-
-#: ../src/settings.cpp:1204
-msgid "105%"
-msgstr "105%"
-
-#: ../src/settings.cpp:1205
-msgid "110%"
-msgstr "110%"
-
-#: ../src/settings.cpp:1206
-msgid "115%"
-msgstr "115%"
-
-#: ../src/settings.cpp:1207
-msgid "120%"
-msgstr "120%"
-
-#: ../src/settings.cpp:1208
-msgid "125%"
-msgstr "125%"
-
-#: ../src/settings.cpp:1209
-msgid "130%"
-msgstr "130%"
-
-#: ../src/settings.cpp:1210
-msgid "135%"
-msgstr "135%"
-
-#: ../src/settings.cpp:1211
-msgid "140%"
-msgstr "140%"
-
-#: ../src/settings.cpp:1212
-msgid "145%"
-msgstr "145%"
-
-#: ../src/settings.cpp:1213
-msgid "150%"
-msgstr "150%"
-
-#: ../src/settings.cpp:1214
-msgid "160%"
-msgstr "160%"
-
-#: ../src/settings.cpp:1215
-msgid "180%"
-msgstr "180%"
-
-#: ../src/settings.cpp:1216
-msgid "200%"
-msgstr "200%"
-
-#: ../src/settings.cpp:1297
-msgid "Always use fast updates"
-msgstr "Toujours utiliser des mises à jour rapides"
-
-#: ../src/settings.cpp:1298
-msgid "Don't use fast updates"
-msgstr "Ne pas utiliser de mises à jour rapides"
-
-#: ../src/settings.cpp:1299
-msgid "Full updates every 2 pages"
-msgstr "Mise à jour complète toutes les 2 pages"
-
-#: ../src/settings.cpp:1300
-msgid "Full updates every 3 pages"
-msgstr "Mise à jour complète toutes les 3 pages"
-
-#: ../src/settings.cpp:1301
-msgid "Full updates every 4 pages"
-msgstr "Mise à jour complète toutes les 4 pages"
-
-#: ../src/settings.cpp:1302
-msgid "Full updates every 5 pages"
-msgstr "Mise à jour complète toutes les 5 pages"
-
-#: ../src/settings.cpp:1303
-msgid "Full updates every 6 pages"
-msgstr "Mise à jour complète toutes les 6 pages"
-
-#: ../src/settings.cpp:1304
-msgid "Full updates every 7 pages"
-msgstr "Mise à jour complète toutes les 7 pages"
-
-#: ../src/settings.cpp:1305
-msgid "Full updates every 8 pages"
-msgstr "Mise à jour complète toutes les 8 pages"
-
-#: ../src/settings.cpp:1306
-msgid "Full updates every 9 pages"
-msgstr "Mise à jour complète toutes les 9 pages"
-
-#: ../src/settings.cpp:1307
-msgid "Full updates every 10 pages"
-msgstr "Mise à jour complète toutes les 10 pages"
-
-#: ../src/settings.cpp:1308
-msgid "Full updates every 14 pages"
-msgstr "Mise à jour complète toutes les 14 pages"
-
-#: ../src/settings.cpp:1309
-msgid "Full updates every 20 pages"
-msgstr "Mise à jour complète toutes les 20 pages"
-
-#: ../src/settings.cpp:1310
-msgid "Full updates every 25 pages"
-msgstr "Mise à jour complète toutes les 25 pages"
-
-#: ../src/settings.cpp:1311
-msgid "Full updates every 30 pages"
-msgstr "Mise à jour complète toutes les 30 pages"
-
-#: ../src/settings.cpp:1312
-msgid "Full updates every 35 pages"
-msgstr "Mise à jour complète toutes les 35 pages"
-
-#: ../src/settings.cpp:1313
-msgid "Full updates every 40 pages"
-msgstr "Mise à jour complète toutes les 40 pages"
-
-#: ../src/settings.cpp:1314
-msgid "Full updates every 45 pages"
-msgstr "Mise à jour complète toutes les 45 pages"
-
-#: ../src/settings.cpp:1315
-msgid "Full updates every 50 pages"
-msgstr "Mise à jour complète toutes les 50 pages"
-
-#: ../src/settings.cpp:1320
-msgid "Turbo mode disabled"
-msgstr "Mode turbo désactivé"
-
-#: ../src/settings.cpp:1321
-msgid "Turbo mode enabled"
-msgstr "Mode turbo activé"
-
-#: ../src/settings.cpp:1326
-msgid "1 minute"
-msgstr "1 minute"
-
-#: ../src/settings.cpp:1327
-msgid "2 minutes"
-msgstr "2 minutes"
-
-#: ../src/settings.cpp:1328
-msgid "3 minutes"
-msgstr "3 minutes"
-
-#: ../src/settings.cpp:1329
-msgid "4 minutes"
-msgstr "4 minutes"
-
-#: ../src/settings.cpp:1330
-msgid "5 minutes"
-msgstr "5 minutes"
-
-#: ../src/settings.cpp:1331
-msgid "6 minutes"
-msgstr "6 minutes"
-
-#: ../src/settings.cpp:1332
-msgid "7 minutes"
-msgstr "7 minutes"
-
-#: ../src/settings.cpp:1333
-msgid "8 minutes"
-msgstr "8 minutes"
-
-#: ../src/settings.cpp:1334
-msgid "9 minutes"
-msgstr "9 minutes"
-
-#: ../src/settings.cpp:1335
-msgid "10 minutes"
-msgstr "10 minutes"
-
-#: ../src/settings.cpp:1336
-msgid "15 minutes"
-msgstr "15 minutes"
-
-#: ../src/settings.cpp:1337
-msgid "20 minutes"
-msgstr "20 minutes"
-
-#: ../src/settings.cpp:1338
-msgid "25 minutes"
-msgstr "25 minutes"
-
-#: ../src/settings.cpp:1339
-msgid "30 minutes"
-msgstr "30 minutes"
-
-#: ../src/settings.cpp:1340
-msgid "35 minutes"
-msgstr "35 minutes"
-
-#: ../src/settings.cpp:1341
-msgid "40 minutes"
-msgstr "40 minutes"
-
-#: ../src/settings.cpp:1342
-msgid "45 minutes"
-msgstr "45 minutes"
-
-#: ../src/settings.cpp:1343
-msgid "50 minutes"
-msgstr "50 minutes"
-
-#: ../src/settings.cpp:1344
-msgid "55 minutes"
-msgstr "55 minutes"
-
-#: ../src/settings.cpp:1345
-msgid "1 hour"
-msgstr "1 heure"
-
-#: ../src/settings.cpp:1346
-msgid "2 hours"
-msgstr "2 heures"
-
-#: ../src/settings.cpp:1352
-msgid "Fixed"
-msgstr "Fixé"
-
-#: ../src/settings.cpp:1353
-msgid "Dynamic"
-msgstr "Dynamique"
-
-#: ../src/settings.cpp:1361
-msgid "180+slow next page"
-msgstr "180+ page suivante LENTE"
-
-#: ../src/settings.cpp:1362
-msgid "180+slow prev/next page"
-msgstr "180+page précédente/page suivante LENTE"
-
-#: ../src/settings.cpp:1363
-msgid "180+FAST next page"
-msgstr "180+prochaine page RAPIDE"
-
-#: ../src/settings.cpp:1364
-msgid "180+FAST prev/next page"
-msgstr "180+page précédente/page suivante  RAPIDE"
-
-#: ../src/settings.cpp:1365
-msgid "180+FAST next/prev page"
-msgstr "180+page suivante/page précédente  RAPIDE"
-
-#: ../src/settings.cpp:1383 ../src/settings.cpp:1400
-msgid "Auto"
-msgstr "Auto"
-
-#: ../src/settings.cpp:1384
-msgid "2 BPP"
-msgstr "2 BPP"
-
-#: ../src/settings.cpp:1385
-msgid "3 BPP"
-msgstr "3 BPP"
-
-#: ../src/settings.cpp:1386
-msgid "4 BPP"
-msgstr "4 BPP"
-
-#: ../src/settings.cpp:1387
-msgid "8 BPP"
-msgstr "8 BPP"
-
-#: ../src/settings.cpp:1393
-msgid "Disabled (1:1)"
-msgstr "Désactivé (1:1)"
-
-#: ../src/settings.cpp:1394
-msgid "Integer scale"
-msgstr "Echelle entière"
-
-#: ../src/settings.cpp:1395
-msgid "Arbitrary scale"
-msgstr "Echelle arbitraire"
-
-#: ../src/settings.cpp:1401
-msgid "*1"
-msgstr "*1"
-
-#: ../src/settings.cpp:1402
-msgid "*2"
-msgstr "*2"
-
-#: ../src/settings.cpp:1403
-msgid "*3"
-msgstr "*3"
-
-#: ../src/settings.cpp:1487
-msgid "No hinting"
-msgstr "Aucun repère"
-
-#: ../src/settings.cpp:1488
-msgid "Use bytecode"
-msgstr "Utiliser code portable"
-
-#: ../src/settings.cpp:1489
-msgid "Autohinting"
-msgstr "Optimisation automatique"
-
-#: ../src/settings.cpp:1490
-msgid "Light"
-msgstr "Éclairage"
-
-#: ../src/settings.cpp:1495
-msgid "Default paragraph formatting"
-msgstr "Formatage par défaut du paragraphe"
-
-#: ../src/settings.cpp:1496
-msgctxt "CSS"
-msgid "Title"
-msgstr "Titre"
-
-#: ../src/settings.cpp:1497
-msgid "Subtitle"
-msgstr "Sous-titre"
-
-#: ../src/settings.cpp:1498
-msgid "Preformatted text / code"
-msgstr "Texte / code préformaté"
-
-#: ../src/settings.cpp:1499
-msgid "Link"
-msgstr "Lien"
-
-#: ../src/settings.cpp:1501
-msgid "Epigraph"
-msgstr "Épigraphe"
-
-#: ../src/settings.cpp:1502
-msgid "Poem"
-msgstr "Poème"
-
-#: ../src/settings.cpp:1503
-msgid "Text / Cite / Epigraph author"
-msgstr "Texte / Citation / Auteur épigraphe"
-
-#: ../src/settings.cpp:1504
-msgid "Footnote"
-msgstr "Note de bas de page"
-
-#: ../src/settings.cpp:1505
-msgid "Footnote link"
-msgstr "Lien vers la note de bas de page"
-
-#: ../src/settings.cpp:1506
-msgid "Footnote title"
-msgstr "Titre de la note de bas de page"
-
-#: ../src/settings.cpp:1507
-msgid "Annotation"
-msgstr "Annotation"
-
-#: ../src/settings.cpp:1547
-msgid "Default font face"
-msgstr "Police par défaut"
-
-#: ../src/settings.cpp:1552
-msgid "Font settings"
-msgstr "Réglage de la police"
-
-#: ../src/settings.cpp:1559
-msgid "Font antialiasing"
-msgstr "Police antialiasing"
-
-#: ../src/settings.cpp:1562
-msgid "Font hinting"
-msgstr "Optimisation du rendu de la police"
-
-#: ../src/settings.cpp:1564
-msgid "Font kerning"
-msgstr "Crénage de la police"
-
-#: ../src/settings.cpp:1566
-msgid "Font embolding"
-msgstr "Épaississement police "
-
-#: ../src/settings.cpp:1568
-msgid "Tracking"
-msgstr "Traçage"
-
-#: ../src/settings.cpp:1570
-msgid "Font Gamma"
-msgstr "Gamma de la police"
-
-#: ../src/settings.cpp:1572
-msgid "Document embedded fonts"
-msgstr "Polices contenues dans le document"
-
-#: ../src/settings.cpp:1575
-msgid "Fallback font face"
-msgstr "Repli de la police"
-
-#: ../src/settings.cpp:1581
-msgid "Formatting settings"
-msgstr "Paramètres de formatage"
-
-#: ../src/settings.cpp:1593
-msgid "[No Hyphenation]"
-msgstr "[Pas d'hyphenation]"
-
-#: ../src/settings.cpp:1594
-msgid "[Algorythmic Hyphenation]"
-msgstr "[Hyphenation algorythmique]"
-
-#: ../src/settings.cpp:1596
-msgid "Hyphenation"
-msgstr "Hyphenation"
-
-#: ../src/settings.cpp:1610
-msgid "Preformatted text"
-msgstr "Texte préformaté"
-
-#: ../src/settings.cpp:1613
-msgid "Space condensing percent"
-msgstr "Pourcentage de l'espace condensé"
-
-#: ../src/settings.cpp:1616
-msgid "Space expanding percent"
-msgstr "Pourcentage de l'espace d'expansion"
-
-#: ../src/settings.cpp:1619
-msgid "Floating punctuation"
-msgstr "Ponctuation flottante"
-
-#: ../src/settings.cpp:1625
-msgid "Image scaling"
-msgstr "Mise à l'échelle de l'image"
-
-#: ../src/settings.cpp:1630
-msgid "Block image scaling mode"
-msgstr "Bloquer le mode de mise à l'échelle de l'image "
-
-#: ../src/settings.cpp:1633
-msgid "Block image max zoom"
-msgstr "Bloquer l'image au zoom maxi"
-
-#: ../src/settings.cpp:1636
-msgid "Inline image scaling mode"
-msgstr "Mode de redimensionnement de l'image en ligne"
-
-#: ../src/settings.cpp:1639
-msgid "Inline image max zoom"
-msgstr "Zoom maxi image en ligne"
-
-#: ../src/settings.cpp:1648
-msgid "Page settings"
-msgstr "Paramètres de page"
-
-#: ../src/settings.cpp:1653
-msgid "Status line"
-msgstr "Ligne de status"
-
-#: ../src/settings.cpp:1658
-msgid "Status line settings"
-msgstr "Paramètres de la ligne de status"
-
-#: ../src/settings.cpp:1675
-msgid "Time format"
-msgstr "Format heure"
-
-#: ../src/settings.cpp:1677
-msgid "Show time"
-msgstr "Affichage de l'heure"
-
-#: ../src/settings.cpp:1679
-msgid "Show title"
-msgstr "Afficher le titre"
-
-#: ../src/settings.cpp:1681
-msgid "Show battery"
-msgstr "Afficher la batterie"
-
-#: ../src/settings.cpp:1683
-msgid "Show battery percent"
-msgstr "Afficher la charge de la batterie"
-
-#: ../src/settings.cpp:1686
-msgid "Show position percent"
-msgstr "Afficher le pourcentage de lecture"
-
-#: ../src/settings.cpp:1688
-msgid "Show page count"
-msgstr "Afficher le decompte des pages"
-
-#: ../src/settings.cpp:1690
-msgid "Show page count till chapter end"
-msgstr "Afficher les pages restantes avant la fin du chapitre"
-
-#: ../src/settings.cpp:1693
-msgid "Show page number"
-msgstr "Afficher le nombre de page"
-
-#: ../src/settings.cpp:1695
-msgid "Show chapter marks"
-msgstr "Afficher les repères des chapitres"
-
-#: ../src/settings.cpp:1704
-msgid "Page margins"
-msgstr "Marges de page"
-
-#: ../src/settings.cpp:1709
-msgid "Top margin"
-msgstr "Marge supérieure"
-
-#: ../src/settings.cpp:1711
-msgid "Bottom margin"
-msgstr "Marge inférieure"
-
-#: ../src/settings.cpp:1713
-msgid "Left margin"
-msgstr "Marge gauche"
-
-#: ../src/settings.cpp:1715
-msgid "Right margin"
-msgstr "Marge droite"
-
-#: ../src/settings.cpp:1720
-msgid "Footnotes at page bottom"
-msgstr "Notes en bas de page"
-
-#: ../src/settings.cpp:1726
-msgid "Display settings"
-msgstr "Paramètres d'affichage"
-
-#: ../src/settings.cpp:1735
-msgid "Landscape pages"
-msgstr "Page en mode paysage"
-
-#: ../src/settings.cpp:1737
-msgid "Inverse display"
-msgstr "Inverser affichage"
-
-#: ../src/settings.cpp:1740
-msgid "Show bookmark icons"
-msgstr "Afficher les icones de marque-page"
-
-#: ../src/settings.cpp:1743
-msgid "Highlight bookmarks"
-msgstr "Surligner les marque-pages"
-
-#: ../src/settings.cpp:1747
-msgid "Display update mode"
-msgstr "Mode de mise à jour de l'affichage"
-
-#: ../src/settings.cpp:1755
-msgid "Standby"
-msgstr "Veille"
-
-#: ../src/settings.cpp:1762
-msgid "Turbo update mode"
-msgstr "Mode de mise à jour turbo"
-
-#: ../src/settings.cpp:1767
-msgid "Gray buffer depth (needs restart)"
-msgstr "Niveau de profondeur du gris (nécessite un redémarrage)"
-
-#: ../src/settings.cpp:1772
-msgid "Custom system theme (needs restart)"
-msgstr "Thème système customisé (nécessite un redémarrage) "
-
-#: ../src/settings.cpp:1778
-msgid "Use new TOC menu"
-msgstr "Utiliser le sommaire généré automatiquement"
-
-#: ../src/settings.cpp:1786
-msgid "Skin"
-msgstr "Habillage"
-
-#: ../src/settings.cpp:1802
-msgid "Control settings"
-msgstr "Paramètres de contrôle"
-
-#: ../src/settings.cpp:1809
-msgid "Rotate"
-msgstr "Tourner"
-
-#: ../src/settings.cpp:1812
-msgid "Page turn angle"
-msgstr "Angle de rotation de la page"
-
-#: ../src/settings.cpp:1828
-msgid "Tap action"
-msgstr "Effet de l'appui"
-
-#: ../src/settings.cpp:1830
-msgid "Long tap action"
-msgstr "Effet de l'appui long"
-
-#: ../src/settings.cpp:1834
-msgid "Height of the upper tap zone"
-msgstr "Hauteur de la zone d'appui haute"
-
-#: ../src/settings.cpp:1837
-msgid "Height of the middle tap zone"
-msgstr "Hauteur de la zone d'appui milieu"
-
-#: ../src/settings.cpp:1840
-msgid "Width of the left tap zone"
-msgstr "Largeur de la zone d'appui gauche"
-
-#: ../src/settings.cpp:1843
-msgid "Width of the middle tap zone"
-msgstr "Largeur de la zone d'appui milieu"
-
-#: ../src/settings.cpp:1847
-msgid "Page Turn Swipes"
-msgstr "Tourner les pages par balayage"
-
-#: ../src/settings.cpp:1850
-msgid "Front Light Swipes"
-msgstr "Réglage de l'éclairage par balayage"
-
-#: ../src/settings.cpp:1854
-msgid "Pinch zoom"
-msgstr "Pincer pour zoomer"
-
-#: ../src/settings.cpp:1872
-msgid "Style settings"
-msgstr "Paramètres de style"
-
-#: ../src/settings.cpp:1877
-msgid "Document embedded styles"
-msgstr "Styles incorporés dans le document"
-
-#: ../src/settings.cpp:1896 ../src/viewdlg.cpp:601
-msgid "Clear cache"
-msgstr "Vider le cache"
-
-#: ../src/settings.cpp:1904 ../src/viewdlg.cpp:599 ../src/ota_update.cpp:277
-msgid "OTA Update"
-msgstr "Mise à jour OTA"
-
-#: ../src/settings.cpp:1911 ../src/viewdlg.cpp:600
-msgid "OTA Update Dev"
-msgstr "Mise à jour OTA Développement"
-
-#: ../src/settings.cpp:1934
-msgid ""
-"Press $1 to change option\n"
-"$2 to apply, $3 to cancel"
-msgstr ""
-"Appuyer $1 pour changer l'option\n"
-"$2 pour appliquer, $3 pour annuler"
-
-#: ../src/viewdlg.cpp:159
-msgid "No dictionaries found"
-msgstr "Pas de dictionnaire trouvé"
-
-#: ../src/viewdlg.cpp:160
-msgid "Place dictionaries to directory 'dict' of SD card."
-msgstr "Placer les dictionnaires 'dict' dans le répertoire de la carte SD"
-
-#: ../src/viewdlg.cpp:161
-msgid "Dictionaries in standard unix .dict format are supported."
-msgstr "Les dictionnaires au format unix standard \".dict\" sont supportés."
-
-#: ../src/viewdlg.cpp:162
-msgid ""
-"For each dictionary, pair of files should be provided: data file (with .dict "
-"or .dict.dz extension, and index file with .index extension"
-msgstr ""
-"Pour chaque dictionnaire, deux fichiers sont nécessaires : fichier de "
-"données (avec l'extension .dict ou .dict.dz et le fichier d'index, "
-"extension .index"
-
-#: ../src/viewdlg.cpp:176
-msgid "Table of contents"
-msgstr "Sommaire"
-
-#: ../src/viewdlg.cpp:181
-msgid "Enter page number"
-msgstr "Entrer le numéro de page"
-
-#: ../src/viewdlg.cpp:194
-msgid "Enter position percent"
-msgstr "Entrer la position %"
-
-#: ../src/viewdlg.cpp:355
-msgid "Find in dictionary"
-msgstr "Trouver dans le dictionnaire"
-
-#: ../src/viewdlg.cpp:485
-msgid "M"
-msgstr "М"
-
-#: ../src/viewdlg.cpp:487
-msgid "Ok"
-msgstr "ОК"
-
-#: ../src/viewdlg.cpp:489
-msgid "Up"
-msgstr "Haut"
-
-#: ../src/viewdlg.cpp:491
-msgid "Down"
-msgstr "Bas"
-
-#: ../src/viewdlg.cpp:493
-msgid "C"
-msgstr "С"
-
-#: ../src/viewdlg.cpp:495
-msgctxt "Key"
-msgid "Left"
-msgstr "Gauche"
-
-#: ../src/viewdlg.cpp:497
-msgctxt "Key"
-msgid "Right"
-msgstr "Droit"
-
-#: ../src/viewdlg.cpp:499
-msgid "Side Up"
-msgstr "Coté en haut"
-
-#: ../src/viewdlg.cpp:501
-msgid "Side Down"
-msgstr "Coté bas"
-
-#: ../src/viewdlg.cpp:503
-msgid "Side Press"
-msgstr "Appuyer coté"
-
-#: ../src/viewdlg.cpp:505
-msgid "Menu"
-msgstr "Menu"
-
-#: ../src/viewdlg.cpp:507
-msgid "Zoom"
-msgstr "Zoom"
-
-#: ../src/viewdlg.cpp:518
-msgid "Long"
-msgstr "Long"
-
-#: ../src/viewdlg.cpp:525
-msgid "To first page"
-msgstr "A la première page"
-
-#: ../src/viewdlg.cpp:527
-msgid "Back by page"
-msgstr "Retour page par page"
-
-#: ../src/viewdlg.cpp:529
-msgid "Forward by page"
-msgstr "Avance page par page"
-
-#: ../src/viewdlg.cpp:530
-msgid "Forward in move history"
-msgstr "Avancer dans l'historique de déplacement"
-
-#: ../src/viewdlg.cpp:531
-msgid "Back in move history"
-msgstr "Retour  dans l'historique de déplacement"
-
-#: ../src/viewdlg.cpp:532
-msgid "Next link"
-msgstr "Lien suivant"
-
-#: ../src/viewdlg.cpp:533
-msgid "Previous link"
-msgstr "Lien précédent"
-
-#: ../src/viewdlg.cpp:534 ../src/viewdlg.cpp:561
-msgid "Go to link"
-msgstr "Aller au lien"
-
-#: ../src/viewdlg.cpp:535
-msgid "To last page"
-msgstr "Aller à la dernière page"
-
-#: ../src/viewdlg.cpp:536
-msgid "Go to position"
-msgstr "Aller à la position"
-
-#: ../src/viewdlg.cpp:538
-msgid "Zoom in"
-msgstr "Zoom avant"
-
-#: ../src/viewdlg.cpp:539
-msgid "Zoom out"
-msgstr "Zoom arrière"
-
-#: ../src/viewdlg.cpp:540
-msgid "Toggle bold text"
-msgstr "Basculer le texte en gras"
-
-#: ../src/viewdlg.cpp:541
-msgid "Toggle text format"
-msgstr "Basculer le format du texte"
-
-#: ../src/viewdlg.cpp:542
-msgid "Save bookmark by number"
-msgstr "Sauver les marque-pages par nombre"
-
-#: ../src/viewdlg.cpp:543
-msgid "Go to bookmark by number"
-msgstr "Aller au marque page par nombre"
-
-#: ../src/viewdlg.cpp:544
-msgid "Move by chapter"
-msgstr "Se déplacer par chapitre"
-
-#: ../src/viewdlg.cpp:545
-msgid "First link"
-msgstr "Premier lien"
-
-#: ../src/viewdlg.cpp:546
-msgid "Rotate by"
-msgstr "Tourner par"
-
-#: ../src/viewdlg.cpp:547
-msgid "Set rotate angle"
-msgstr "Définir l'angle de rotation"
-
-#: ../src/viewdlg.cpp:548
-msgid "Save history and bookmarks"
-msgstr "Sauvegarder l'historique et les marque-pages"
-
-#: ../src/viewdlg.cpp:549
-msgid "Save document to cache"
-msgstr "Sauvegarder le document en zone temporaire"
-
-#: ../src/viewdlg.cpp:550
-msgid "Close dialog"
-msgstr "Fermer le dialogue"
-
-#: ../src/viewdlg.cpp:553
-msgid "Scroll forward"
-msgstr "Défiler vers l'avant"
-
-#: ../src/viewdlg.cpp:554
-msgid "Scroll back"
-msgstr "Défiler vers l'arrière"
-
-#: ../src/viewdlg.cpp:555
-msgid "Close book"
-msgstr "Fermer le livre"
-
-#: ../src/viewdlg.cpp:556
-msgid "Main menu"
-msgstr "Menu principal"
-
-#: ../src/viewdlg.cpp:557
-msgid "Go to page dialog"
-msgstr "Aller à la page des dialogues"
-
-#: ../src/viewdlg.cpp:558
-msgid "Settings menu"
-msgstr "Menu des paramètres"
-
-#: ../src/viewdlg.cpp:559
-msgid "Font size settings"
-msgstr "Paramètre de taille de la police"
-
-#: ../src/viewdlg.cpp:560
-msgid "Page orientation settings"
-msgstr "Paramètres de l'orientation de la page"
-
-#: ../src/viewdlg.cpp:565
-msgid "Find in Dictionary (T5)"
-msgstr "Trouver dans le dictionnaire (T5)"
-
-#: ../src/viewdlg.cpp:567
-msgid "Bookmark list"
-msgstr "Liste des marque-pages"
-
-#: ../src/viewdlg.cpp:568
-msgid "Citations list"
-msgstr "Liste des citations"
-
-#: ../src/viewdlg.cpp:569
-msgid "Go to bookmark..."
-msgstr "Aller au marque-page..."
-
-#: ../src/viewdlg.cpp:570
-msgid "Recent books list"
-msgstr "Liste des ouvrages récents"
-
-#: ../src/viewdlg.cpp:571
-msgid "Open recent book by number"
-msgstr "Ouvrir un livre récent par nombre"
-
-#: ../src/viewdlg.cpp:572
-msgid "Switch to recent book"
-msgstr "Basculer vers un livre récent"
-
-#: ../src/viewdlg.cpp:575
-msgid "Search dialog"
-msgstr "Recherche de dialogue "
-
-#: ../src/viewdlg.cpp:576
-msgid "Find in Dictionary (virtual keyboard)"
-msgstr "Trouver dans le dictionnaire (clavier virtuel)"
-
-#: ../src/viewdlg.cpp:577
-msgid "Next keyboard layout"
-msgstr "Agencement clavier suivant"
-
-#: ../src/viewdlg.cpp:578
-msgid "Previous keyboard layout"
-msgstr "Agencement clavier précédent"
-
-#: ../src/viewdlg.cpp:579
-msgid "Show manual"
-msgstr "afficher le manuel"
-
-#: ../src/viewdlg.cpp:580
-msgid "Show key mapping"
-msgstr "Afficher agenecemt du clavier"
-
-#: ../src/viewdlg.cpp:581
-msgid "Go to percent..."
-msgstr "Aller à  (%)..."
-
-#: ../src/viewdlg.cpp:586
-msgid "Front light"
-msgstr "Éclairage frontal"
-
-#: ../src/viewdlg.cpp:587
-msgid "Invert display"
-msgstr "Inversion de l'affichage"
-
-#: ../src/viewdlg.cpp:588
-msgid "Full screen update"
-msgstr "Rafraîchissement complet de l'écran"
-
-#: ../src/viewdlg.cpp:589
-msgid "Toggle status bar"
-msgstr "Affichage barre de statut"
-
-#: ../src/viewdlg.cpp:592
-msgid "Enter standby mode"
-msgstr "Entrer en mode veille"
-
-#: ../src/viewdlg.cpp:594
-msgid "Tasks list"
-msgstr "Liste des tâches"
-
-#: ../src/viewdlg.cpp:596
-msgid "Toggle system panel"
-msgstr "Affichage panneau système"
-
-#: ../src/viewdlg.cpp:598
-msgid "Lock device"
-msgstr "Verrouiller l'appareil"
-
-#: ../src/viewdlg.cpp:603
-msgid "Open system panel"
-msgstr "Ouvrir le panneau système"
-
-#: ../src/viewdlg.cpp:604
-msgid "Toggle front light"
-msgstr "Activer l'éclairage frontal"
-
-#: ../src/viewdlg.cpp:607
-msgid "PocketBook Main menu"
-msgstr "Menu principal du PocketBook"
-
-#: ../src/viewdlg.cpp:609
-msgid "Unknown command"
-msgstr "Commande inconnue"
-
-#: ../src/viewdlg.cpp:616
-msgid "Previous Page"
-msgstr "Page précédente"
-
-#: ../src/viewdlg.cpp:618
-msgid "Next Page"
-msgstr "Page suivante"
-
-#: ../src/viewdlg.cpp:620
-msgid "Back by 10 Pages"
-msgstr "Reculer de 10 pages"
-
-#: ../src/viewdlg.cpp:622
-msgid "Forward by 10 Pages"
-msgstr "Avancer de 10 pages"
-
-#: ../src/viewdlg.cpp:624
-msgid "Next Chapter"
-msgstr "Chapitre suivant"
-
-#: ../src/viewdlg.cpp:626
-msgid "Previous Chapter"
-msgstr "Chapitre précédent"
-
-#: ../src/viewdlg.cpp:628
-msgid "Add Bookmark"
-msgstr "Ajouter un marque-page"
-
-#: ../src/viewdlg.cpp:630
-msgid "Rotate Clockwise"
-msgstr "Tourner dans le sens horaire"
-
-#: ../src/viewdlg.cpp:632
-msgid "Rotate Anti-Clockwise"
-msgstr "Tourner dans le sens anti-horaire"
-
-#: ../src/viewdlg.cpp:634
-msgid "Portrait View"
-msgstr "Mode portrait"
-
-#: ../src/viewdlg.cpp:636
-msgid "Landscape View"
-msgstr "Mode paysage"
-
-#: ../src/viewdlg.cpp:660
-msgid "Key"
-msgstr "Touche"
-
-#: ../src/viewdlg.cpp:660
-msgid "Assigned function"
-msgstr "Fonction assignée"
-
-#: ../src/ota_update.cpp:151
-msgid ""
-"Download successful!\n"
-"CoolReader will restart itself."
-msgstr ""
-"Téléchargement réussi !\n"
-"CoolReader va redémarrer."
-
-#: ../src/ota_update.cpp:152
-msgid "OK"
-msgstr "OK"
-
-#: ../src/ota_update.cpp:161
-msgid "Downloading... (2nd Method)"
-msgstr "Téléchargement... (2éme Méthode)"
-
-#: ../src/ota_update.cpp:172
-msgid "Couldn't download the update package!"
-msgstr "Impossible de télécharger le paquet mis à jour !"
-
-#: ../src/ota_update.cpp:192 ../src/ota_update.cpp:300
-#: ../src/ota_update.cpp:328
-msgid "Downloading..."
-msgstr "Chargement..."
-
-#: ../src/ota_update.cpp:235
-msgid "Couldn't remove existing package!"
-msgstr "Ne peut supprimer le paquet existant !"
-
-#: ../src/ota_update.cpp:272
-msgid "Couldn't connect to the network!"
-msgstr "Ne peut se connecter au réseau !"
-
-#: ../src/ota_update.cpp:278 ../src/ota_update.cpp:294
-#: ../src/ota_update.cpp:307
-msgid "Searching..."
-msgstr "Recherche..."
-
-#: ../src/ota_update.cpp:285
-msgid "You have the latest version."
-msgstr "Vous avez la dernière version."
-
-#: ../src/ota_update.cpp:317
-msgid ""
-"Update is not available for your device!\n"
-"Device model: "
-msgstr ""
-"La mise à jour n'est pas disponible pour votre appareil !\n"
-"Modèle de l'appareil :"
-
-#: ../src/ota_update.cpp:339
-msgid "Failed updating!"
-msgstr "Mise à jour interrompu !"
-
-#: ../src/pb_toc.cpp:22
-msgid "Contents"
-msgstr "Contenu"
-
-#: ../src/cr3pocketbook.cpp:2532
-msgid "Cache cleared."
-msgstr "Cache vidé."
-
-#: ../src/cr3pocketbook.cpp:2537
-msgid "Unable to list the directory contents!"
-msgstr "Impossible de lister le contenu du répertoire !"
-
-#: ../src/cr3pocketbook.cpp:2543
-msgid "Unable to clear cache!"
-msgstr "Impossible de vider le cache !"
-
-#: ../src/cr3pocketbook.cpp:2703
-msgid "Start"
-msgstr "Début"
-
-#: ../src/cr3pocketbook.cpp:2718
-msgid "Section"
-msgstr "Section"
-
-#: ../src/cr3pocketbook.cpp:2728
-msgid "End"
-msgstr "Fin"
-
-#: ../src/cr3pocketbook.cpp:4181
-msgid "Press $1 to translate"
-msgstr "Appuyer sur $1 pour traduire"
-
-#: ../src/cr3pocketbook.cpp:5291
-msgid "Updated to v"
-msgstr "Mis à jour vers v"
-
-#: ../src/cr3pocketbook.cpp:5452
-msgid "Untitled"
-msgstr "Sans titre"
-
-#: ../src/cr3pocketbook.cpp:5785
-msgid "Custom system theme applied. CR3 will now restart."
-msgstr "Thème système customisé appliqué. CR3 va redémarrer."
-
-#: ../src/cr3pocketbook.cpp:5848
-msgid "Restored default system theme. CR3 will now restart."
-msgstr "Thème système par défaut restauré. CR3 va redémarrer."
+#~ msgid "Go to page"
+#~ msgstr "Aller à la page"
+
+#~ msgid "Open recent book"
+#~ msgstr "Ouvrir un livre récent"
+
+#~ msgid "Dictionary"
+#~ msgstr "Dictionnaire"
+
+#~ msgid "Cite"
+#~ msgstr "Citer"
+
+#~ msgid "Bookmarks"
+#~ msgstr "Marque-pages"
+
+#~ msgid "Search"
+#~ msgstr "Recherche"
+
+#~ msgid "Settings"
+#~ msgstr "Paramètres"
+
+#~ msgid "Keyboard layout"
+#~ msgstr "Configuration du clavier"
+
+#~ msgid ""
+#~ "$1 - choose command\n"
+#~ "$2, $3 - close"
+#~ msgstr ""
+#~ "$1 - choisir commande\n"
+#~ "$2, $3 - fermer"
+
+#~ msgid "Current page"
+#~ msgstr "Page actuelle"
+
+#~ msgid "Total pages"
+#~ msgstr "Pages totales"
+
+#~ msgid "Battery state"
+#~ msgstr "État de la batterie"
+
+#~ msgid "charging..."
+#~ msgstr "chargement..."
+
+#~ msgid "Current Time"
+#~ msgstr "Heure actuelle"
+
+#~ msgid "Current chapter"
+#~ msgstr "Chapitre actuel"
+
+#~ msgid "Status"
+#~ msgstr "Status"
+
+#~ msgid "Archive name"
+#~ msgstr "Nom d'archive"
+
+#~ msgid "Archive path"
+#~ msgstr "Chemin de l'archive"
+
+#~ msgid "Archive size"
+#~ msgstr "Taille de l'archive"
+
+#~ msgid "File name"
+#~ msgstr "Nom de fichier"
+
+#~ msgid "File path"
+#~ msgstr "Chemin du fichier"
+
+#~ msgid "File size"
+#~ msgstr "Taille du fichier"
+
+#~ msgid "File format"
+#~ msgstr "Format du fichier"
+
+#~ msgid "File info"
+#~ msgstr "Information du fichier"
+
+#~ msgctxt "Book"
+#~ msgid "Title"
+#~ msgstr "Titre"
+
+#~ msgid "Author(s)"
+#~ msgstr "Auteur(s)"
+
+#~ msgid "Series name"
+#~ msgstr "Nom de la série"
+
+#~ msgid "Series number"
+#~ msgstr "Numéro de série"
+
+#~ msgid "Date"
+#~ msgstr "Date"
+
+#~ msgid "Genres"
+#~ msgstr "Genres"
+
+#~ msgid "Language"
+#~ msgstr "Langue"
+
+#~ msgid "Translator"
+#~ msgstr "Traducteur"
+
+#~ msgid "Source language"
+#~ msgstr "Langue source"
+
+#~ msgid "Book info"
+#~ msgstr "Information du livre"
+
+#~ msgid "Document author"
+#~ msgstr "Auteur du document"
+
+#~ msgid "Document date"
+#~ msgstr "Date du document"
+
+#~ msgid "Document source URL"
+#~ msgstr "URL de la source du document"
+
+#~ msgid "OCR by"
+#~ msgstr "OCR par"
+
+#~ msgid "Document version"
+#~ msgstr "Version du document"
+
+#~ msgid "Change history"
+#~ msgstr "Historique des modifications"
+
+#~ msgid "ID"
+#~ msgstr "ID"
+
+#~ msgid "Program used"
+#~ msgstr "Programme utilisé"
+
+#~ msgid "Document info"
+#~ msgstr "Informations sur le document"
+
+#~ msgid "Publication name"
+#~ msgstr "Nom de publication"
+
+#~ msgid "Publisher"
+#~ msgstr "Editeur"
+
+#~ msgid "Publisher city"
+#~ msgstr "Ville d'édition"
+
+#~ msgid "Publication year"
+#~ msgstr "Année d'édition"
+
+#~ msgid "ISBN"
+#~ msgstr "ISBN"
+
+#~ msgid "Publication info"
+#~ msgstr "Info de publication"
+
+#~ msgid "Custom info"
+#~ msgstr "Informations courantes"
+
+#~ msgid "CoolReader for PocketBook"
+#~ msgstr "CoolReader pour PocketBook"
+
+#~ msgid "Build date"
+#~ msgstr "Date de création"
+
+#~ msgid "Build type"
+#~ msgstr "Type de construction"
+
+#~ msgid "About program"
+#~ msgstr "A propos du programme"
+
+#~ msgid "Hardware type"
+#~ msgstr "Type de matériel"
+
+#~ msgid "Firmware version"
+#~ msgstr "Version du firmware"
+
+#~ msgid "Keyboard type"
+#~ msgstr "Type du clavier"
+
+#~ msgid "Screen type"
+#~ msgstr "Type d'écran"
+
+#~ msgid "Config file"
+#~ msgstr "Fichier de configuration"
+
+#~ msgid "Keymap file"
+#~ msgstr "Fichier Keymap"
+
+#~ msgid "Skin file"
+#~ msgstr "Fichier d'habillage"
+
+#~ msgid "Debug information"
+#~ msgstr "Information de deboggage"
+
+#~ msgid "Loading: please wait..."
+#~ msgstr "Chargement : attendez s'il vous plait..."
+
+#~ msgid "Open book"
+#~ msgstr "Ouvrir livre"
+
+#~ msgid "Delete record"
+#~ msgstr "Effacer enregistrement"
+
+#~ msgid ""
+#~ "$1 - open book\n"
+#~ "$2, $3 - close"
+#~ msgstr ""
+#~ "$1 - ouvrir livre\n"
+#~ "$2, $3 - fermer"
+
+#~ msgid "Current page: $1 of $2\n"
+#~ msgstr "Page actuelle : $1 de $2\n"
+
+#~ msgid "Enter page number:"
+#~ msgstr "Entrer un numéro de page :"
+
+#~ msgid "Empty slot"
+#~ msgstr "Emplacement vide"
+
+#~ msgid "Page $1 ($2%)"
+#~ msgstr "Page $1 ($2%)"
+
+#~ msgid "Go to bookmark"
+#~ msgstr "Aller au marque-page"
+
+#~ msgid ""
+#~ "Short press $1 - go to bookmark,\n"
+#~ "$2 - switch to SET mode"
+#~ msgstr ""
+#~ "Appui court $1 - aller au marque-page,\n"
+#~ "$2 - passer en mode réglage"
+
+#~ msgid ""
+#~ "Short press $1 - go to bookmark,\n"
+#~ "long press - set bookmark"
+#~ msgstr ""
+#~ "Appui court $1 - aller au marque-page,\n"
+#~ "appui long - définir marque-page"
+
+#~ msgid "Set bookmark"
+#~ msgstr "Définir marque-page"
+
+#~ msgid ""
+#~ "$1 - set bookmark,\n"
+#~ "$2 - switch to GO mode"
+#~ msgstr ""
+#~ "$1 - définir marque-page\n"
+#~ "$2 - passer en mode GO"
+
+#~ msgid ""
+#~ "Short press $1 - set bookmark,\n"
+#~ "long press - go to bookmark"
+#~ msgstr ""
+#~ "Appui court $1 - définir marque-page,\n"
+#~ "appui long - aller au marque-page"
+
+#~ msgid "Delete bookmark"
+#~ msgstr "Effacer le marque-page"
+
+#~ msgid "Go to citation"
+#~ msgstr "Aller à la citation"
+
+#~ msgid "Delete citation"
+#~ msgstr "Effacer la citation"
+
+#~ msgid "Citations"
+#~ msgstr "Citations"
+
+#~ msgid "Cite selection dialog"
+#~ msgstr "Sélection du texte à citer"
+
+#~ msgid "From dictionary "
+#~ msgstr "Depuis le dictionnaire"
+
+#~ msgid "[cannot read article]"
+#~ msgstr "[Ne peut lire l'article]"
+
+#~ msgid "choose command"
+#~ msgstr "choisir une commande"
+
+#~ msgid "Controls"
+#~ msgstr "Contrôles"
+
+#~ msgid "(No action)"
+#~ msgstr "(pas d'action)"
+
+#~ msgid "[Command is not assigned]"
+#~ msgstr "[Pas de commande аssignée]"
+
+#~ msgid "0` (Portrait)"
+#~ msgstr "0` (Portrait)"
+
+#~ msgid "90 `"
+#~ msgstr "90 `"
+
+#~ msgid "180 `"
+#~ msgstr "180 `"
+
+#~ msgid "270 `"
+#~ msgstr "270 `"
+
+#~ msgid "Page orientation"
+#~ msgstr "Orientation de la page"
+
+#~ msgid "Default font size"
+#~ msgstr "Taille de la police par défaut"
+
+#~ msgid "The quick brown fox jumps over lazy dog"
+#~ msgstr "Le rapide renard marron saute par dessus le chien fainéant "
+
+#~ msgid "Justify"
+#~ msgstr "Justifié"
+
+#~ msgctxt "CSS"
+#~ msgid "Left"
+#~ msgstr "Gauche"
+
+#~ msgid "Center"
+#~ msgstr "Centre"
+
+#~ msgctxt "CSS"
+#~ msgid "Right"
+#~ msgstr "Droit"
+
+#~ msgid "No indent"
+#~ msgstr "Pas de retrait"
+
+#~ msgid "Small indent"
+#~ msgstr "Léger retrait droit"
+
+#~ msgid "Big indent"
+#~ msgstr "Grand retrait droit"
+
+#~ msgid "Small outdent"
+#~ msgstr "Léger retrait droit"
+
+#~ msgid "Big outdent"
+#~ msgstr "Grand retrait gauche"
+
+#~ msgid "[Default sans-serif font]"
+#~ msgstr "[Police sans-serif par défaut]"
+
+#~ msgid "[Default serif font]"
+#~ msgstr "[Police serif par défaut]"
+
+#~ msgid "[Default monospace font]"
+#~ msgstr "[Police monospace par défaut]"
+
+#~ msgid "Bigger (105%)"
+#~ msgstr "Plus grand (105%)"
+
+#~ msgid "Bigger (110%)"
+#~ msgstr "Plus grand (110%)"
+
+#~ msgid "Bigger (115%)"
+#~ msgstr "Plus grand (115%)"
+
+#~ msgid "Bigger (120%)"
+#~ msgstr "Plus grand (120%)"
+
+#~ msgid "Bigger (150%)"
+#~ msgstr "Plus grand (150%)"
+
+#~ msgid "Smaller (95%)"
+#~ msgstr "Plus petit (95%)"
+
+#~ msgid "Smaller (90%)"
+#~ msgstr "Plus petit (90%)"
+
+#~ msgid "Smaller (85%)"
+#~ msgstr "Plus petit (85%)"
+
+#~ msgid "Smaller (80%)"
+#~ msgstr "Plus petit (80%)"
+
+#~ msgid "Smaller (70%)"
+#~ msgstr "Plus petit (70%)"
+
+#~ msgid "Smaller (60%)"
+#~ msgstr "Plus petit (60%)"
+
+#~ msgid "Normal"
+#~ msgstr "Normal"
+
+#~ msgid "Bold"
+#~ msgstr "Gras"
+
+#~ msgid "Bolder"
+#~ msgstr "Plus gras"
+
+#~ msgid "Lighter"
+#~ msgstr "Plus léger"
+
+#~ msgid "Italic"
+#~ msgstr "Italique"
+
+#~ msgid "None"
+#~ msgstr "Aucun"
+
+#~ msgid "Underline"
+#~ msgstr "Souligner"
+
+#~ msgid "Line through"
+#~ msgstr "Ligne au travers"
+
+#~ msgid "Overline"
+#~ msgstr "Trait suscrit"
+
+#~ msgid "Baseline"
+#~ msgstr "Base"
+
+#~ msgid "Subscript"
+#~ msgstr "indice"
+
+#~ msgid "Superscript"
+#~ msgstr "Exposant"
+
+#~ msgid "Black"
+#~ msgstr "Noir"
+
+#~ msgid "Gray"
+#~ msgstr "Gris"
+
+#~ msgid "White"
+#~ msgstr "Blanc"
+
+#~ msgid "0.2 of line height"
+#~ msgstr "0.2 d'hauteur de ligne"
+
+#~ msgid "0.3 of line height"
+#~ msgstr "0.3 d'hauteur de ligne"
+
+#~ msgid "0.5 of line height"
+#~ msgstr "0.5 d'hauteur de ligne"
+
+#~ msgid "1 line height"
+#~ msgstr "1 hauteur de ligne"
+
+#~ msgid "2 of line height"
+#~ msgstr "2 de hauteur de ligne"
+
+#~ msgid "1.5 of line height"
+#~ msgstr "1.5 d'hauteur de ligne"
+
+#~ msgid "4 of line height"
+#~ msgstr "4 de hauteur de ligne"
+
+#~ msgid "5% of line width"
+#~ msgstr "5% de largeur de ligne"
+
+#~ msgid "10% of line width"
+#~ msgstr "10% de largeur de ligne"
+
+#~ msgid "15% of line width"
+#~ msgstr "15% de largeur de ligne"
+
+#~ msgid "20% of line width"
+#~ msgstr "20% de largeur de ligne"
+
+#~ msgid "30% of line width"
+#~ msgstr "30% de largeur de ligne"
+
+#~ msgid "Text alignment"
+#~ msgstr "Alignement du texte"
+
+#~ msgid "First line indent"
+#~ msgstr "Retrait de première ligne"
+
+#~ msgid "Font face"
+#~ msgstr "Police avant"
+
+#~ msgid "Font size"
+#~ msgstr "Taille de la police"
+
+#~ msgid "Font weight"
+#~ msgstr "Épaisseur de la police "
+
+#~ msgid "Font style"
+#~ msgstr "Style de la police"
+
+#~ msgid "Interline space"
+#~ msgstr "Espace d'interligne"
+
+#~ msgid "Letter spacing"
+#~ msgstr "Espacement des lettres"
+
+#~ msgid "Text decoration"
+#~ msgstr "Habillage texte"
+
+#~ msgid "Text vertical alignment"
+#~ msgstr "Alignement vertical du texte"
+
+#~ msgid "Text color"
+#~ msgstr "Couleur du texte"
+
+#~ msgid "Background color"
+#~ msgstr "Couleur d'arrière plan"
+
+#~ msgid "Margin before"
+#~ msgstr "Marge avant"
+
+#~ msgid "Margin after"
+#~ msgstr "Marge après"
+
+#~ msgid "Margin left"
+#~ msgstr "Marge gauche"
+
+#~ msgid "Margin right"
+#~ msgstr "Marge droite"
+
+#~ msgid "On for all fonts"
+#~ msgstr "Appliquer pour toutes les fontes"
+
+#~ msgid "On for big fonts only"
+#~ msgstr "Appliquer pour les grosses polices seulement"
+
+#~ msgid "Off"
+#~ msgstr "Désactivé"
+
+#~ msgid "On"
+#~ msgstr "Activé"
+
+#~ msgid "AM/PM"
+#~ msgstr "AM/PM"
+
+#~ msgid "24h"
+#~ msgstr "24h"
+
+#~ msgid "Solid"
+#~ msgstr "Solide"
+
+#~ msgid "Inverse"
+#~ msgstr "Inverser"
+
+#~ msgid "One"
+#~ msgstr "Un"
+
+#~ msgid "Two"
+#~ msgstr "Deux"
+
+#~ msgid "Top"
+#~ msgstr "Haut"
+
+#~ msgid "70%"
+#~ msgstr "70%"
+
+#~ msgid "75%"
+#~ msgstr "75%"
+
+#~ msgid "80%"
+#~ msgstr "80%"
+
+#~ msgid "85%"
+#~ msgstr "85%"
+
+#~ msgid "90%"
+#~ msgstr "90%"
+
+#~ msgid "95%"
+#~ msgstr "95%"
+
+#~ msgid "100%"
+#~ msgstr "100%"
+
+#~ msgid "105%"
+#~ msgstr "105%"
+
+#~ msgid "110%"
+#~ msgstr "110%"
+
+#~ msgid "115%"
+#~ msgstr "115%"
+
+#~ msgid "120%"
+#~ msgstr "120%"
+
+#~ msgid "125%"
+#~ msgstr "125%"
+
+#~ msgid "130%"
+#~ msgstr "130%"
+
+#~ msgid "135%"
+#~ msgstr "135%"
+
+#~ msgid "140%"
+#~ msgstr "140%"
+
+#~ msgid "145%"
+#~ msgstr "145%"
+
+#~ msgid "150%"
+#~ msgstr "150%"
+
+#~ msgid "160%"
+#~ msgstr "160%"
+
+#~ msgid "180%"
+#~ msgstr "180%"
+
+#~ msgid "200%"
+#~ msgstr "200%"
+
+#~ msgid "Always use fast updates"
+#~ msgstr "Toujours utiliser des mises à jour rapides"
+
+#~ msgid "Don't use fast updates"
+#~ msgstr "Ne pas utiliser de mises à jour rapides"
+
+#~ msgid "Full updates every 2 pages"
+#~ msgstr "Mise à jour complète toutes les 2 pages"
+
+#~ msgid "Full updates every 3 pages"
+#~ msgstr "Mise à jour complète toutes les 3 pages"
+
+#~ msgid "Full updates every 4 pages"
+#~ msgstr "Mise à jour complète toutes les 4 pages"
+
+#~ msgid "Full updates every 5 pages"
+#~ msgstr "Mise à jour complète toutes les 5 pages"
+
+#~ msgid "Full updates every 6 pages"
+#~ msgstr "Mise à jour complète toutes les 6 pages"
+
+#~ msgid "Full updates every 7 pages"
+#~ msgstr "Mise à jour complète toutes les 7 pages"
+
+#~ msgid "Full updates every 8 pages"
+#~ msgstr "Mise à jour complète toutes les 8 pages"
+
+#~ msgid "Full updates every 9 pages"
+#~ msgstr "Mise à jour complète toutes les 9 pages"
+
+#~ msgid "Full updates every 10 pages"
+#~ msgstr "Mise à jour complète toutes les 10 pages"
+
+#~ msgid "Full updates every 14 pages"
+#~ msgstr "Mise à jour complète toutes les 14 pages"
+
+#~ msgid "Full updates every 20 pages"
+#~ msgstr "Mise à jour complète toutes les 20 pages"
+
+#~ msgid "Full updates every 25 pages"
+#~ msgstr "Mise à jour complète toutes les 25 pages"
+
+#~ msgid "Full updates every 30 pages"
+#~ msgstr "Mise à jour complète toutes les 30 pages"
+
+#~ msgid "Full updates every 35 pages"
+#~ msgstr "Mise à jour complète toutes les 35 pages"
+
+#~ msgid "Full updates every 40 pages"
+#~ msgstr "Mise à jour complète toutes les 40 pages"
+
+#~ msgid "Full updates every 45 pages"
+#~ msgstr "Mise à jour complète toutes les 45 pages"
+
+#~ msgid "Full updates every 50 pages"
+#~ msgstr "Mise à jour complète toutes les 50 pages"
+
+#~ msgid "Turbo mode disabled"
+#~ msgstr "Mode turbo désactivé"
+
+#~ msgid "Turbo mode enabled"
+#~ msgstr "Mode turbo activé"
+
+#~ msgid "1 minute"
+#~ msgstr "1 minute"
+
+#~ msgid "2 minutes"
+#~ msgstr "2 minutes"
+
+#~ msgid "3 minutes"
+#~ msgstr "3 minutes"
+
+#~ msgid "4 minutes"
+#~ msgstr "4 minutes"
+
+#~ msgid "5 minutes"
+#~ msgstr "5 minutes"
+
+#~ msgid "6 minutes"
+#~ msgstr "6 minutes"
+
+#~ msgid "7 minutes"
+#~ msgstr "7 minutes"
+
+#~ msgid "8 minutes"
+#~ msgstr "8 minutes"
+
+#~ msgid "9 minutes"
+#~ msgstr "9 minutes"
+
+#~ msgid "10 minutes"
+#~ msgstr "10 minutes"
+
+#~ msgid "15 minutes"
+#~ msgstr "15 minutes"
+
+#~ msgid "20 minutes"
+#~ msgstr "20 minutes"
+
+#~ msgid "25 minutes"
+#~ msgstr "25 minutes"
+
+#~ msgid "30 minutes"
+#~ msgstr "30 minutes"
+
+#~ msgid "35 minutes"
+#~ msgstr "35 minutes"
+
+#~ msgid "40 minutes"
+#~ msgstr "40 minutes"
+
+#~ msgid "45 minutes"
+#~ msgstr "45 minutes"
+
+#~ msgid "50 minutes"
+#~ msgstr "50 minutes"
+
+#~ msgid "55 minutes"
+#~ msgstr "55 minutes"
+
+#~ msgid "1 hour"
+#~ msgstr "1 heure"
+
+#~ msgid "2 hours"
+#~ msgstr "2 heures"
+
+#~ msgid "Fixed"
+#~ msgstr "Fixé"
+
+#~ msgid "Dynamic"
+#~ msgstr "Dynamique"
+
+#~ msgid "180+slow next page"
+#~ msgstr "180+ page suivante LENTE"
+
+#~ msgid "180+slow prev/next page"
+#~ msgstr "180+page précédente/page suivante LENTE"
+
+#~ msgid "180+FAST next page"
+#~ msgstr "180+prochaine page RAPIDE"
+
+#~ msgid "180+FAST prev/next page"
+#~ msgstr "180+page précédente/page suivante  RAPIDE"
+
+#~ msgid "180+FAST next/prev page"
+#~ msgstr "180+page suivante/page précédente  RAPIDE"
+
+#~ msgid "Auto"
+#~ msgstr "Auto"
+
+#~ msgid "2 BPP"
+#~ msgstr "2 BPP"
+
+#~ msgid "3 BPP"
+#~ msgstr "3 BPP"
+
+#~ msgid "4 BPP"
+#~ msgstr "4 BPP"
+
+#~ msgid "8 BPP"
+#~ msgstr "8 BPP"
+
+#~ msgid "Disabled (1:1)"
+#~ msgstr "Désactivé (1:1)"
+
+#~ msgid "Integer scale"
+#~ msgstr "Echelle entière"
+
+#~ msgid "Arbitrary scale"
+#~ msgstr "Echelle arbitraire"
+
+#~ msgid "*1"
+#~ msgstr "*1"
+
+#~ msgid "*2"
+#~ msgstr "*2"
+
+#~ msgid "*3"
+#~ msgstr "*3"
+
+#~ msgid "No hinting"
+#~ msgstr "Aucun repère"
+
+#~ msgid "Use bytecode"
+#~ msgstr "Utiliser code portable"
+
+#~ msgid "Autohinting"
+#~ msgstr "Optimisation automatique"
+
+#~ msgid "Light"
+#~ msgstr "Éclairage"
+
+#~ msgid "Default paragraph formatting"
+#~ msgstr "Formatage par défaut du paragraphe"
+
+#~ msgctxt "CSS"
+#~ msgid "Title"
+#~ msgstr "Titre"
+
+#~ msgid "Subtitle"
+#~ msgstr "Sous-titre"
+
+#~ msgid "Preformatted text / code"
+#~ msgstr "Texte / code préformaté"
+
+#~ msgid "Link"
+#~ msgstr "Lien"
+
+#~ msgid "Epigraph"
+#~ msgstr "Épigraphe"
+
+#~ msgid "Poem"
+#~ msgstr "Poème"
+
+#~ msgid "Text / Cite / Epigraph author"
+#~ msgstr "Texte / Citation / Auteur épigraphe"
+
+#~ msgid "Footnote"
+#~ msgstr "Note de bas de page"
+
+#~ msgid "Footnote link"
+#~ msgstr "Lien vers la note de bas de page"
+
+#~ msgid "Footnote title"
+#~ msgstr "Titre de la note de bas de page"
+
+#~ msgid "Annotation"
+#~ msgstr "Annotation"
+
+#~ msgid "Default font face"
+#~ msgstr "Police par défaut"
+
+#~ msgid "Font settings"
+#~ msgstr "Réglage de la police"
+
+#~ msgid "Font antialiasing"
+#~ msgstr "Police antialiasing"
+
+#~ msgid "Font hinting"
+#~ msgstr "Optimisation du rendu de la police"
+
+#~ msgid "Font kerning"
+#~ msgstr "Crénage de la police"
+
+#~ msgid "Font embolding"
+#~ msgstr "Épaississement police "
+
+#~ msgid "Tracking"
+#~ msgstr "Traçage"
+
+#~ msgid "Font Gamma"
+#~ msgstr "Gamma de la police"
+
+#~ msgid "Document embedded fonts"
+#~ msgstr "Polices contenues dans le document"
+
+#~ msgid "Fallback font face"
+#~ msgstr "Repli de la police"
+
+#~ msgid "Formatting settings"
+#~ msgstr "Paramètres de formatage"
+
+#~ msgid "[No Hyphenation]"
+#~ msgstr "[Pas d'hyphenation]"
+
+#~ msgid "[Algorythmic Hyphenation]"
+#~ msgstr "[Hyphenation algorythmique]"
+
+#~ msgid "Hyphenation"
+#~ msgstr "Hyphenation"
+
+#~ msgid "Preformatted text"
+#~ msgstr "Texte préformaté"
+
+#~ msgid "Space condensing percent"
+#~ msgstr "Pourcentage de l'espace condensé"
+
+#~ msgid "Space expanding percent"
+#~ msgstr "Pourcentage de l'espace d'expansion"
+
+#~ msgid "Floating punctuation"
+#~ msgstr "Ponctuation flottante"
+
+#~ msgid "Image scaling"
+#~ msgstr "Mise à l'échelle de l'image"
+
+#~ msgid "Block image scaling mode"
+#~ msgstr "Bloquer le mode de mise à l'échelle de l'image "
+
+#~ msgid "Block image max zoom"
+#~ msgstr "Bloquer l'image au zoom maxi"
+
+#~ msgid "Inline image scaling mode"
+#~ msgstr "Mode de redimensionnement de l'image en ligne"
+
+#~ msgid "Inline image max zoom"
+#~ msgstr "Zoom maxi image en ligne"
+
+#~ msgid "Page settings"
+#~ msgstr "Paramètres de page"
+
+#~ msgid "Status line"
+#~ msgstr "Ligne de status"
+
+#~ msgid "Status line settings"
+#~ msgstr "Paramètres de la ligne de status"
+
+#~ msgid "Time format"
+#~ msgstr "Format heure"
+
+#~ msgid "Show time"
+#~ msgstr "Affichage de l'heure"
+
+#~ msgid "Show title"
+#~ msgstr "Afficher le titre"
+
+#~ msgid "Show battery"
+#~ msgstr "Afficher la batterie"
+
+#~ msgid "Show battery percent"
+#~ msgstr "Afficher la charge de la batterie"
+
+#~ msgid "Show position percent"
+#~ msgstr "Afficher le pourcentage de lecture"
+
+#~ msgid "Show page count"
+#~ msgstr "Afficher le decompte des pages"
+
+#~ msgid "Show page count till chapter end"
+#~ msgstr "Afficher les pages restantes avant la fin du chapitre"
+
+#~ msgid "Show page number"
+#~ msgstr "Afficher le nombre de page"
+
+#~ msgid "Show chapter marks"
+#~ msgstr "Afficher les repères des chapitres"
+
+#~ msgid "Page margins"
+#~ msgstr "Marges de page"
+
+#~ msgid "Top margin"
+#~ msgstr "Marge supérieure"
+
+#~ msgid "Bottom margin"
+#~ msgstr "Marge inférieure"
+
+#~ msgid "Left margin"
+#~ msgstr "Marge gauche"
+
+#~ msgid "Right margin"
+#~ msgstr "Marge droite"
+
+#~ msgid "Footnotes at page bottom"
+#~ msgstr "Notes en bas de page"
+
+#~ msgid "Display settings"
+#~ msgstr "Paramètres d'affichage"
+
+#~ msgid "Landscape pages"
+#~ msgstr "Page en mode paysage"
+
+#~ msgid "Inverse display"
+#~ msgstr "Inverser affichage"
+
+#~ msgid "Show bookmark icons"
+#~ msgstr "Afficher les icones de marque-page"
+
+#~ msgid "Highlight bookmarks"
+#~ msgstr "Surligner les marque-pages"
+
+#~ msgid "Display update mode"
+#~ msgstr "Mode de mise à jour de l'affichage"
+
+#~ msgid "Standby"
+#~ msgstr "Veille"
+
+#~ msgid "Turbo update mode"
+#~ msgstr "Mode de mise à jour turbo"
+
+#~ msgid "Gray buffer depth (needs restart)"
+#~ msgstr "Niveau de profondeur du gris (nécessite un redémarrage)"
+
+#~ msgid "Custom system theme (needs restart)"
+#~ msgstr "Thème système customisé (nécessite un redémarrage) "
+
+#~ msgid "Use new TOC menu"
+#~ msgstr "Utiliser le sommaire généré automatiquement"
+
+#~ msgid "Skin"
+#~ msgstr "Habillage"
+
+#~ msgid "Control settings"
+#~ msgstr "Paramètres de contrôle"
+
+#~ msgid "Rotate"
+#~ msgstr "Tourner"
+
+#~ msgid "Page turn angle"
+#~ msgstr "Angle de rotation de la page"
+
+#~ msgid "Tap action"
+#~ msgstr "Effet de l'appui"
+
+#~ msgid "Long tap action"
+#~ msgstr "Effet de l'appui long"
+
+#~ msgid "Height of the upper tap zone"
+#~ msgstr "Hauteur de la zone d'appui haute"
+
+#~ msgid "Height of the middle tap zone"
+#~ msgstr "Hauteur de la zone d'appui milieu"
+
+#~ msgid "Width of the left tap zone"
+#~ msgstr "Largeur de la zone d'appui gauche"
+
+#~ msgid "Width of the middle tap zone"
+#~ msgstr "Largeur de la zone d'appui milieu"
+
+#~ msgid "Page Turn Swipes"
+#~ msgstr "Tourner les pages par balayage"
+
+#~ msgid "Front Light Swipes"
+#~ msgstr "Réglage de l'éclairage par balayage"
+
+#~ msgid "Pinch zoom"
+#~ msgstr "Pincer pour zoomer"
+
+#~ msgid "Style settings"
+#~ msgstr "Paramètres de style"
+
+#~ msgid "Document embedded styles"
+#~ msgstr "Styles incorporés dans le document"
+
+#~ msgid "Clear cache"
+#~ msgstr "Vider le cache"
+
+#~ msgid "OTA Update"
+#~ msgstr "Mise à jour OTA"
+
+#~ msgid "OTA Update Dev"
+#~ msgstr "Mise à jour OTA Développement"
+
+#~ msgid ""
+#~ "Press $1 to change option\n"
+#~ "$2 to apply, $3 to cancel"
+#~ msgstr ""
+#~ "Appuyer $1 pour changer l'option\n"
+#~ "$2 pour appliquer, $3 pour annuler"
+
+#~ msgid "No dictionaries found"
+#~ msgstr "Pas de dictionnaire trouvé"
+
+#~ msgid "Place dictionaries to directory 'dict' of SD card."
+#~ msgstr "Placer les dictionnaires 'dict' dans le répertoire de la carte SD"
+
+#~ msgid "Dictionaries in standard unix .dict format are supported."
+#~ msgstr "Les dictionnaires au format unix standard \".dict\" sont supportés."
+
+#~ msgid ""
+#~ "For each dictionary, pair of files should be provided: data file "
+#~ "(with .dict or .dict.dz extension, and index file with .index extension"
+#~ msgstr ""
+#~ "Pour chaque dictionnaire, deux fichiers sont nécessaires : fichier de "
+#~ "données (avec l'extension .dict ou .dict.dz et le fichier d'index, "
+#~ "extension .index"
+
+#~ msgid "Table of contents"
+#~ msgstr "Sommaire"
+
+#~ msgid "Enter page number"
+#~ msgstr "Entrer le numéro de page"
+
+#~ msgid "Enter position percent"
+#~ msgstr "Entrer la position %"
+
+#~ msgid "Find in dictionary"
+#~ msgstr "Trouver dans le dictionnaire"
+
+#~ msgid "M"
+#~ msgstr "М"
+
+#~ msgid "Ok"
+#~ msgstr "ОК"
+
+#~ msgid "Up"
+#~ msgstr "Haut"
+
+#~ msgid "Down"
+#~ msgstr "Bas"
+
+#~ msgid "C"
+#~ msgstr "С"
+
+#~ msgctxt "Key"
+#~ msgid "Left"
+#~ msgstr "Gauche"
+
+#~ msgctxt "Key"
+#~ msgid "Right"
+#~ msgstr "Droit"
+
+#~ msgid "Side Up"
+#~ msgstr "Coté en haut"
+
+#~ msgid "Side Down"
+#~ msgstr "Coté bas"
+
+#~ msgid "Side Press"
+#~ msgstr "Appuyer coté"
+
+#~ msgid "Menu"
+#~ msgstr "Menu"
+
+#~ msgid "Zoom"
+#~ msgstr "Zoom"
+
+#~ msgid "Long"
+#~ msgstr "Long"
+
+#~ msgid "To first page"
+#~ msgstr "A la première page"
+
+#~ msgid "Back by page"
+#~ msgstr "Retour page par page"
+
+#~ msgid "Forward by page"
+#~ msgstr "Avance page par page"
+
+#~ msgid "Forward in move history"
+#~ msgstr "Avancer dans l'historique de déplacement"
+
+#~ msgid "Back in move history"
+#~ msgstr "Retour  dans l'historique de déplacement"
+
+#~ msgid "Next link"
+#~ msgstr "Lien suivant"
+
+#~ msgid "Previous link"
+#~ msgstr "Lien précédent"
+
+#~ msgid "Go to link"
+#~ msgstr "Aller au lien"
+
+#~ msgid "To last page"
+#~ msgstr "Aller à la dernière page"
+
+#~ msgid "Go to position"
+#~ msgstr "Aller à la position"
+
+#~ msgid "Zoom in"
+#~ msgstr "Zoom avant"
+
+#~ msgid "Zoom out"
+#~ msgstr "Zoom arrière"
+
+#~ msgid "Toggle bold text"
+#~ msgstr "Basculer le texte en gras"
+
+#~ msgid "Toggle text format"
+#~ msgstr "Basculer le format du texte"
+
+#~ msgid "Save bookmark by number"
+#~ msgstr "Sauver les marque-pages par nombre"
+
+#~ msgid "Go to bookmark by number"
+#~ msgstr "Aller au marque page par nombre"
+
+#~ msgid "Move by chapter"
+#~ msgstr "Se déplacer par chapitre"
+
+#~ msgid "First link"
+#~ msgstr "Premier lien"
+
+#~ msgid "Rotate by"
+#~ msgstr "Tourner par"
+
+#~ msgid "Set rotate angle"
+#~ msgstr "Définir l'angle de rotation"
+
+#~ msgid "Save history and bookmarks"
+#~ msgstr "Sauvegarder l'historique et les marque-pages"
+
+#~ msgid "Save document to cache"
+#~ msgstr "Sauvegarder le document en zone temporaire"
+
+#~ msgid "Close dialog"
+#~ msgstr "Fermer le dialogue"
+
+#~ msgid "Scroll forward"
+#~ msgstr "Défiler vers l'avant"
+
+#~ msgid "Scroll back"
+#~ msgstr "Défiler vers l'arrière"
+
+#~ msgid "Close book"
+#~ msgstr "Fermer le livre"
+
+#~ msgid "Main menu"
+#~ msgstr "Menu principal"
+
+#~ msgid "Go to page dialog"
+#~ msgstr "Aller à la page des dialogues"
+
+#~ msgid "Settings menu"
+#~ msgstr "Menu des paramètres"
+
+#~ msgid "Font size settings"
+#~ msgstr "Paramètre de taille de la police"
+
+#~ msgid "Page orientation settings"
+#~ msgstr "Paramètres de l'orientation de la page"
+
+#~ msgid "Find in Dictionary (T5)"
+#~ msgstr "Trouver dans le dictionnaire (T5)"
+
+#~ msgid "Bookmark list"
+#~ msgstr "Liste des marque-pages"
+
+#~ msgid "Citations list"
+#~ msgstr "Liste des citations"
+
+#~ msgid "Go to bookmark..."
+#~ msgstr "Aller au marque-page..."
+
+#~ msgid "Recent books list"
+#~ msgstr "Liste des ouvrages récents"
+
+#~ msgid "Open recent book by number"
+#~ msgstr "Ouvrir un livre récent par nombre"
+
+#~ msgid "Switch to recent book"
+#~ msgstr "Basculer vers un livre récent"
+
+#~ msgid "Search dialog"
+#~ msgstr "Recherche de dialogue "
+
+#~ msgid "Find in Dictionary (virtual keyboard)"
+#~ msgstr "Trouver dans le dictionnaire (clavier virtuel)"
+
+#~ msgid "Next keyboard layout"
+#~ msgstr "Agencement clavier suivant"
+
+#~ msgid "Previous keyboard layout"
+#~ msgstr "Agencement clavier précédent"
+
+#~ msgid "Show manual"
+#~ msgstr "afficher le manuel"
+
+#~ msgid "Show key mapping"
+#~ msgstr "Afficher agenecemt du clavier"
+
+#~ msgid "Go to percent..."
+#~ msgstr "Aller à  (%)..."
+
+#~ msgid "Front light"
+#~ msgstr "Éclairage frontal"
+
+#~ msgid "Invert display"
+#~ msgstr "Inversion de l'affichage"
+
+#~ msgid "Full screen update"
+#~ msgstr "Rafraîchissement complet de l'écran"
+
+#~ msgid "Toggle status bar"
+#~ msgstr "Affichage barre de statut"
+
+#~ msgid "Enter standby mode"
+#~ msgstr "Entrer en mode veille"
+
+#~ msgid "Tasks list"
+#~ msgstr "Liste des tâches"
+
+#~ msgid "Toggle system panel"
+#~ msgstr "Affichage panneau système"
+
+#~ msgid "Lock device"
+#~ msgstr "Verrouiller l'appareil"
+
+#~ msgid "Open system panel"
+#~ msgstr "Ouvrir le panneau système"
+
+#~ msgid "Toggle front light"
+#~ msgstr "Activer l'éclairage frontal"
+
+#~ msgid "PocketBook Main menu"
+#~ msgstr "Menu principal du PocketBook"
+
+#~ msgid "Unknown command"
+#~ msgstr "Commande inconnue"
+
+#~ msgid "Previous Page"
+#~ msgstr "Page précédente"
+
+#~ msgid "Next Page"
+#~ msgstr "Page suivante"
+
+#~ msgid "Back by 10 Pages"
+#~ msgstr "Reculer de 10 pages"
+
+#~ msgid "Forward by 10 Pages"
+#~ msgstr "Avancer de 10 pages"
+
+#~ msgid "Next Chapter"
+#~ msgstr "Chapitre suivant"
+
+#~ msgid "Previous Chapter"
+#~ msgstr "Chapitre précédent"
+
+#~ msgid "Add Bookmark"
+#~ msgstr "Ajouter un marque-page"
+
+#~ msgid "Rotate Clockwise"
+#~ msgstr "Tourner dans le sens horaire"
+
+#~ msgid "Rotate Anti-Clockwise"
+#~ msgstr "Tourner dans le sens anti-horaire"
+
+#~ msgid "Portrait View"
+#~ msgstr "Mode portrait"
+
+#~ msgid "Landscape View"
+#~ msgstr "Mode paysage"
+
+#~ msgid "Key"
+#~ msgstr "Touche"
+
+#~ msgid "Assigned function"
+#~ msgstr "Fonction assignée"
+
+#~ msgid ""
+#~ "Download successful!\n"
+#~ "CoolReader will restart itself."
+#~ msgstr ""
+#~ "Téléchargement réussi !\n"
+#~ "CoolReader va redémarrer."
+
+#~ msgid "OK"
+#~ msgstr "OK"
+
+#~ msgid "Downloading... (2nd Method)"
+#~ msgstr "Téléchargement... (2éme Méthode)"
+
+#~ msgid "Couldn't download the update package!"
+#~ msgstr "Impossible de télécharger le paquet mis à jour !"
+
+#~ msgid "Downloading..."
+#~ msgstr "Chargement..."
+
+#~ msgid "Couldn't remove existing package!"
+#~ msgstr "Ne peut supprimer le paquet existant !"
+
+#~ msgid "Couldn't connect to the network!"
+#~ msgstr "Ne peut se connecter au réseau !"
+
+#~ msgid "Searching..."
+#~ msgstr "Recherche..."
+
+#~ msgid "You have the latest version."
+#~ msgstr "Vous avez la dernière version."
+
+#~ msgid ""
+#~ "Update is not available for your device!\n"
+#~ "Device model: "
+#~ msgstr ""
+#~ "La mise à jour n'est pas disponible pour votre appareil !\n"
+#~ "Modèle de l'appareil :"
+
+#~ msgid "Failed updating!"
+#~ msgstr "Mise à jour interrompu !"
+
+#~ msgid "Contents"
+#~ msgstr "Contenu"
+
+#~ msgid "Cache cleared."
+#~ msgstr "Cache vidé."
+
+#~ msgid "Unable to list the directory contents!"
+#~ msgstr "Impossible de lister le contenu du répertoire !"
+
+#~ msgid "Unable to clear cache!"
+#~ msgstr "Impossible de vider le cache !"
+
+#~ msgid "Start"
+#~ msgstr "Début"
+
+#~ msgid "Section"
+#~ msgstr "Section"
+
+#~ msgid "End"
+#~ msgstr "Fin"
+
+#~ msgid "Press $1 to translate"
+#~ msgstr "Appuyer sur $1 pour traduire"
+
+#~ msgid "Updated to v"
+#~ msgstr "Mis à jour vers v"
+
+#~ msgid "Untitled"
+#~ msgstr "Sans titre"
+
+#~ msgid "Custom system theme applied. CR3 will now restart."
+#~ msgstr "Thème système customisé appliqué. CR3 va redémarrer."
+
+#~ msgid "Restored default system theme. CR3 will now restart."
+#~ msgstr "Thème système par défaut restauré. CR3 va redémarrer."

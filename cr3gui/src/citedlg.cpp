@@ -343,7 +343,7 @@ public:
   virtual void covered() {
     if (_noClose) {
       CRGUIWindowManager *wm = 0;
-      if (this && (wm = mainwin_->getWindowManager()))
+      if ((wm = mainwin_->getWindowManager()))
         wm->activateWindow(this);
       else
         close();

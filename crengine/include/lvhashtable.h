@@ -35,7 +35,6 @@ inline lUInt32 getHash(void *n) { return getHash((lUInt64)n); }
     Implements hash table map
 */
 template <typename keyT, typename valueT> class LVHashTable {
-  friend class iterator;
 
 public:
   class pair {

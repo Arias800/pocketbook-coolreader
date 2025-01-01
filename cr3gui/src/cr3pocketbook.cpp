@@ -102,7 +102,6 @@ ibitmap *standByLockImage = NULL;
 lString16 pbSkinFileName;
 lString16 currentCacheDir;
 lString16 openedCacheFile;
-lString16 currentLang;
 int fw_major;
 int fw_minor;
 int touchPointing;
@@ -290,7 +289,6 @@ CRPocketBookGlobals::CRPocketBookGlobals(char *fileName) {
   CRLog::trace("language=%s", _lang.c_str());
   if (_lang == "ua")
     _lang = "uk";
-  currentLang = lString16(_lang.c_str());
   _keepOrientation = ReadInt(gc, const_cast<char *>("keeporient"), 0);
   _pbDictionary =
       ReadString(gc, const_cast<char *>("dictionary"), const_cast<char *>(""));
@@ -1536,7 +1534,11 @@ public:
       : CRPocketBookInkViewWindow(wm), _curPage(cur_page), _toc(toc),
         _tocLength(toc_length) {}
   virtual void showWindow() {
+#ifndef POCKETBOOK_PRO_FW5
     OpenContents(_toc, _tocLength, _curPage, tocHandler);
+#else
+    CRLog::trace("Not used but avoid crashing");
+#endif
   }
 };
 
@@ -3283,7 +3285,7 @@ void CRPbDictionaryView::launchDictBrowser(const char *urlBase) {
   CRLog::trace("launchDictBrowser(): main_win->getBookLanguage() = %s",
                UnicodeToUtf8(lang).c_str());
   if (lang.empty()) {
-    lang = currentLang;
+    lang = currentLang();
     CRLog::trace("launchDictBrowser(): currentLang = %s",
                  UnicodeToUtf8(lang).c_str());
   }

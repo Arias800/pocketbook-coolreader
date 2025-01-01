@@ -528,7 +528,7 @@ void CRGUIWindowManager::showWaitIcon(lString16 filename, int progressPercent) {
 #define PROGRESS_UPDATE_INTERVAL 5
 /// draws icon at center of screen, with optional progress gauge
 void CRGUIWindowManager::showProgress(lString16 filename, int progressPercent) {
-  time_t t = (time_t)time((time_t)0);
+  time_t t = time(NULL);
   if (t < _lastProgressUpdate + PROGRESS_UPDATE_INTERVAL ||
       progressPercent == _lastProgressPercent)
     return;
@@ -2835,9 +2835,12 @@ void CRGUIWindowManager::loadSkinKeymaps() {
   if (!_skin.isNull()) {
     lString16 keymapDir = LVExtractPath(getKeymapFilePath());
     lString16 defFile = LVCombinePaths(keymapDir, cs16("keydefs.ini"));
-    LVStreamRef keymapFile = _skin->getStream(L"keymaps.ini");
-
-    _skinAccTables.openFromStream(LVOpenFileStream(defFile.c_str(), LVOM_READ),
-                                  keymapFile);
+    if (LVFileExists(defFile)) {
+      CRLog::info("keymaps found : %s, trying to open it",
+                  UnicodeToUtf8(defFile).c_str());
+      LVStreamRef keymapFile = _skin->getStream(L"keymaps.ini");
+      _skinAccTables.openFromStream(
+          LVOpenFileStream(defFile.c_str(), LVOM_READ), keymapFile);
+    }
   }
 }

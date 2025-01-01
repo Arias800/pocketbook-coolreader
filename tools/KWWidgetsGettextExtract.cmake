@@ -17,16 +17,16 @@
 # 'msgid_bugs_address': report address for msgid bugs
 # 'files_from': 
 # GETTEXT_XGETTEXT_EXECUTABLE (string): path to the 'xgettext' executable
-
+cmake_minimum_required(VERSION 3.10)
 set(SUCCESS 1)
 if(NOT "${GETTEXT_XGETTEXT_EXECUTABLE}" STREQUAL "")
 
   # Extract the strings, store the result in a variable instead of a POT file
 
-  exec_program(${GETTEXT_XGETTEXT_EXECUTABLE} 
+  execute_process(COMMAND ${GETTEXT_XGETTEXT_EXECUTABLE}
+      --output="-" ${options} ${keywords} --msgid-bugs-address="${msgid_bugs_address}" --copyright-holder="${copyright_holder}" --files-from="${files_from}"
     RETURN_VALUE xgettext_return
-    OUTPUT_VARIABLE xgettext_output
-    ARGS --output="-" ${options} ${keywords} --msgid-bugs-address="${msgid_bugs_address}" --copyright-holder="${copyright_holder}" --files-from="${files_from}")
+    OUTPUT_VARIABLE xgettext_output)
   if(xgettext_return)
     message("${xgettext_output}")
     set(SUCCESS 0)

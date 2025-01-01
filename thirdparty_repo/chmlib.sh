@@ -7,4 +7,4 @@ URL="https://github.com/jedwing/CHMLib/archive/refs/heads/master.tar.gz"
 
 SOURCESDIR="third_party/${SRCFILE}"
 
-PATCHES="add-cmakelists.patch,chm_lib.h.path,chm_lib.c.path"
+PATCHES="add-cmakelists.patch,chm_lib.h.patch,chm_lib.c.patch"
